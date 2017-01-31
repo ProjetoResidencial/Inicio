@@ -23,6 +23,13 @@ public class ValidaSenha {
 			System.out.println("Senha gravada com Sucesso!!");
 
 		}
+		
+		public void ValidaLogin(){
+			
+			
+			
+			
+		}
 
 	}
 }
