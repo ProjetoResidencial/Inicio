@@ -6,10 +6,10 @@ public class TestaValidacao {
 
 		ValidaSenha validador = new ValidaSenha();
 
-		validador.Login = "Carlos";
-		validador.Senha  = "Henrique9090" ;
+		validador.Login = "Cadrlosroberto";
+		validador.Senha  = "CarlHenrique9090" ;
 
-		validador.ValidaSenha();
+		validador.Validacao();
 
 	}
 
