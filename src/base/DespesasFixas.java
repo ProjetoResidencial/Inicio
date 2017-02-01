@@ -1,6 +1,5 @@
 package base;
 
-
 public class DespesasFixas {
 
 	String Mes;
@@ -21,6 +20,31 @@ public class DespesasFixas {
 
 	void RetornaValorEnergia(double Energia) {
 		this.Energia = Energia;
+	}
+
+	void RetornaValorAgua(double Agua) {
+		this.Agua = Agua;
+	}
+
+	void RetornaValorTelefone(double Telefone) {
+		this.Telefone = Telefone;
+	}
+
+	void RetornaValorCondominio(double Condominio) {
+		this.Condominio = Condominio;
+	}
+
+	void RetornaValorAlguel(double Aluguel) {
+		this.Aluguel = Aluguel;
+	}
+
+	void RetornaValorInternet(double Internet) {
+		this.Internet = Internet;
+	}
+
+	void RetornaTotalFixas() {
+		System.out.println("O Valor Total de Suas Despeas Fixas é: "
+				+ (this.Energia + this.Agua + this.Telefone + this.Condominio + this.Aluguel + this.Internet));
 	}
 
 	void imprimirDespFix() {
