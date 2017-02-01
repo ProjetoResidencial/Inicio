@@ -1,6 +1,6 @@
 package base;
 
-public class ValidaSenha {
+public class Login {
 
 	String Login;
 	String Senha;
