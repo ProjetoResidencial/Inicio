@@ -43,12 +43,12 @@ public class DespesasFixas {
 	}
 
 	void RetornaTotalFixas() {
-		System.out.println("O Valor Total de Suas Despeas Fixas é: "
+		System.out.println("O Valor Total de Suas Despeas Fixas No Mês De " + this.Mes + " é: "
 				+ (this.Energia + this.Agua + this.Telefone + this.Condominio + this.Aluguel + this.Internet));
 	}
 
-	void imprimirDespFix() {
-		System.out.println("Em " + Mes + ", essas foram as suas despesas fixas: " + "\n\n>Total de Energia é: "
+	void ImprimiDetalhado() {
+		System.out.println("\nEm " + Mes + ", essas foram as suas despesas fixas: " + "\n\n>Total de Energia é: "
 				+ Energia + "\n>Total de Agua é: " + Agua + "\n>Total de Telefone é: " + Telefone
 				+ "\n>Total de Condominio é: " + Condominio + "\n>Total de Aluguel é: " + Aluguel
 				+ "\n>Total de Internet é: " + Internet);
