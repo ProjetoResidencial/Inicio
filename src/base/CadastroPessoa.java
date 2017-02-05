@@ -9,7 +9,9 @@ public class CadastroPessoa {
 	String Estado;
 	String Rg;
 	String Cpf;
+	int DataNascimento;
 	int Idade;
+	
 	
 
 }
