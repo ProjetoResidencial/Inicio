@@ -39,6 +39,7 @@ public class TelaInicalDespesasFixas extends JFrame {
 		});
 	}
 
+
 	/**
 	 * Create the frame.
 	 */
