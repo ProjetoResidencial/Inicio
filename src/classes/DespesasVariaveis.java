@@ -1,4 +1,4 @@
-package base;
+package classes;
 
 import org.omg.Messaging.SyncScopeHelper;
 
