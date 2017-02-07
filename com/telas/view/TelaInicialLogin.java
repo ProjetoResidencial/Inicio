@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.banco.controler.BancoDeDados;
+import com.banco.dao.Acesso;
 
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
@@ -68,9 +68,12 @@ public class TelaInicialLogin extends JFrame {
 		BotaoAcessar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoAcessar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				// se acesso for true, abre janela
-				BancoDeDados cl = new BancoDeDados();
+				Acesso cl = new Acesso();
+				
 				cl.Acesso(txtLogin.getText(), txtSenha.getText());
+				
 				if (cl.acesso == true) {
 					TelaInicialCadastroPessoa tl = new TelaInicialCadastroPessoa();
 					tl.show();
