@@ -74,10 +74,11 @@ public class TelaInicialLogin extends JFrame {
 				
 				cl.Acesso(txtLogin.getText(), txtSenha.getText());
 				
+				// se o acesso for verdadeiro, abre a tela de cadastro de pessoa
 				if (cl.acesso == true) {
-					TelaInicialCadastroPessoa tl = new TelaInicialCadastroPessoa();
+					TelaInicialMenuGeral tl = new TelaInicialMenuGeral();
 					tl.show();
-					tl.setExtendedState(new TelaInicialCadastroPessoa().MAXIMIZED_BOTH);
+					tl.setExtendedState(new TelaInicialMenuGeral().MOVE_CURSOR);
 					dispose();
 				}
 				// se acesso for false, simpa os campos e retorna no
@@ -118,6 +119,15 @@ public class TelaInicialLogin extends JFrame {
 		contentPane.add(lblSejaBemVindo);
 		
 		JButton btnNewButton = new JButton("Cadastrar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCadastroUsuario tl = new TelaCadastroUsuario();
+				tl.show();
+				tl.setExtendedState(new TelaCadastroUsuario().MOVE_CURSOR);
+				dispose();
+				
+			}
+		});
 		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		btnNewButton.setBounds(313, 209, 100, 23);
 		contentPane.add(btnNewButton);

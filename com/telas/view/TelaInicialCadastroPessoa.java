@@ -28,6 +28,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 	private JLabel lblDataNascimento;
 	private JTextField textField_8;
 	private JLabel lblCadastroDePessoa;
+	private JTextField textField_9;
 
 	/**
 	 * Launch the application.
@@ -50,7 +51,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 	 */
 	public TelaInicialCadastroPessoa() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 543, 436);
+		setBounds(100, 100, 677, 489);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -82,7 +83,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		contentPane.add(lblCidade);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(90, 138, 298, 20);
+		textField_2.setBounds(90, 138, 339, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -92,17 +93,17 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		contentPane.add(lblEndereo);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(90, 91, 287, 20);
+		textField_3.setBounds(90, 91, 380, 20);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 		
 		JLabel lblN = new JLabel("N\u00BA:");
 		lblN.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblN.setBounds(387, 93, 37, 14);
+		lblN.setBounds(504, 93, 37, 14);
 		contentPane.add(lblN);
 		
 		textField_4 = new JTextField();
-		textField_4.setBounds(421, 91, 46, 20);
+		textField_4.setBounds(541, 91, 46, 20);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
 		
@@ -148,22 +149,32 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		
 		JButton btnSalvar = new JButton("Salvar");
 		btnSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		btnSalvar.setBounds(76, 363, 89, 23);
+		btnSalvar.setBounds(51, 363, 114, 23);
 		contentPane.add(btnSalvar);
 		
 		JButton btnLimpar = new JButton("Limpar");
 		btnLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		btnLimpar.setBounds(219, 363, 89, 23);
+		btnLimpar.setBounds(219, 363, 136, 23);
 		contentPane.add(btnLimpar);
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		btnCancelar.setBounds(360, 363, 89, 23);
+		btnCancelar.setBounds(426, 363, 131, 23);
 		contentPane.add(btnCancelar);
 		
 		lblCadastroDePessoa = new JLabel("Cadastro De Pessoa");
 		lblCadastroDePessoa.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		lblCadastroDePessoa.setBounds(145, 11, 222, 30);
 		contentPane.add(lblCadastroDePessoa);
+		
+		JLabel lblUf = new JLabel("Uf:");
+		lblUf.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblUf.setBounds(454, 140, 37, 14);
+		contentPane.add(lblUf);
+		
+		textField_9 = new JTextField();
+		textField_9.setBounds(501, 138, 86, 20);
+		contentPane.add(textField_9);
+		textField_9.setColumns(10);
 	}
 }
