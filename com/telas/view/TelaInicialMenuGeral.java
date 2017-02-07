@@ -42,33 +42,33 @@ public class TelaInicialMenuGeral extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnCadastros = new JMenu("CADASTROS");
-		mnCadastros.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		menuBar.add(mnCadastros);
+		JMenu MenuCadastros = new JMenu("CADASTROS");
+		MenuCadastros.setFont(new Font("Times New Roman", Font.BOLD, 13));
+		menuBar.add(MenuCadastros);
 		
 		JMenuItem mntmCadastroDeResidncia = new JMenuItem("- Resid\u00EAncia");
 		mntmCadastroDeResidncia.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		mnCadastros.add(mntmCadastroDeResidncia);
+		MenuCadastros.add(mntmCadastroDeResidncia);
 		
 		JMenuItem mntmCadastroDePessoas = new JMenuItem("- Pessoas");
 		mntmCadastroDePessoas.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		mnCadastros.add(mntmCadastroDePessoas);
+		MenuCadastros.add(mntmCadastroDePessoas);
 		
 		JMenuItem mntmCadastroDeUsurios = new JMenuItem("- Usu\u00E1rios");
 		mntmCadastroDeUsurios.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		mnCadastros.add(mntmCadastroDeUsurios);
+		MenuCadastros.add(mntmCadastroDeUsurios);
 		
 		JMenuItem mntmDespesasFixas = new JMenuItem("- Desp. Fixas");
-		mnCadastros.add(mntmDespesasFixas);
+		MenuCadastros.add(mntmDespesasFixas);
 		mntmDespesasFixas.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		
 		JMenuItem mntmDespesasVariaveis = new JMenuItem("- Desp. Variaveis");
-		mnCadastros.add(mntmDespesasVariaveis);
+		MenuCadastros.add(mntmDespesasVariaveis);
 		mntmDespesasVariaveis.setFont(new Font("Times New Roman", Font.BOLD, 12));
 		
-		JMenu mnCadastroDeDespesas = new JMenu("RELAT\u00D3RIOS");
-		mnCadastroDeDespesas.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		menuBar.add(mnCadastroDeDespesas);
+		JMenu MenuRelatorios = new JMenu("RELAT\u00D3RIOS");
+		MenuRelatorios.setFont(new Font("Times New Roman", Font.BOLD, 13));
+		menuBar.add(MenuRelatorios);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));

@@ -20,8 +20,8 @@ import java.awt.Font;
 public class TelaInicialLogin extends JFrame {
 
 	private JPanel contentPane;
-	private JPasswordField txtSenha;
-	private JTextField txtLogin;
+	private JPasswordField TextoSenha;
+	private JTextField TextoLogin;
 
 	/**
 	 * Launch the application.
@@ -50,19 +50,19 @@ public class TelaInicialLogin extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("Login:");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblNewLabel.setBounds(104, 82, 46, 14);
-		contentPane.add(lblNewLabel);
+		JLabel Login = new JLabel("Login:");
+		Login.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		Login.setBounds(104, 82, 46, 14);
+		contentPane.add(Login);
 
-		JLabel lblNewLabel_1 = new JLabel("Senha:");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblNewLabel_1.setBounds(104, 113, 46, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel Senha = new JLabel("Senha:");
+		Senha.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		Senha.setBounds(104, 113, 46, 14);
+		contentPane.add(Senha);
 
-		txtSenha = new JPasswordField();
-		txtSenha.setBounds(160, 110, 124, 20);
-		contentPane.add(txtSenha);
+		TextoSenha = new JPasswordField();
+		TextoSenha.setBounds(160, 110, 124, 20);
+		contentPane.add(TextoSenha);
 
 		JButton BotaoAcessar = new JButton("Acessar");
 		BotaoAcessar.setFont(new Font("Times New Roman", Font.BOLD, 15));
@@ -72,7 +72,7 @@ public class TelaInicialLogin extends JFrame {
 				// se acesso for true, abre janela
 				Acesso cl = new Acesso();
 				
-				cl.Acesso(txtLogin.getText(), txtSenha.getText());
+				cl.Acesso(TextoLogin.getText(), TextoSenha.getText());
 				
 				// se o acesso for verdadeiro, abre a tela de cadastro de pessoa
 				if (cl.acesso == true) {
@@ -84,9 +84,9 @@ public class TelaInicialLogin extends JFrame {
 				// se acesso for false, simpa os campos e retorna no
 				// inicio.(requestfocus)
 				if (cl.acesso == false) {
-					txtLogin.setText("");
-					txtSenha.setText("");
-					txtLogin.requestFocus();
+					TextoLogin.setText("");
+					TextoSenha.setText("");
+					TextoLogin.requestFocus();
 				}
 
 				cl.acesso = false;
@@ -108,18 +108,18 @@ public class TelaInicialLogin extends JFrame {
 		BotaoCancelar.setBounds(184, 209, 100, 23);
 		contentPane.add(BotaoCancelar);
 		
-		txtLogin = new JTextField();
-		txtLogin.setBounds(160, 79, 124, 20);
-		contentPane.add(txtLogin);
-		txtLogin.setColumns(10);
+		TextoLogin = new JTextField();
+		TextoLogin.setBounds(160, 79, 124, 20);
+		contentPane.add(TextoLogin);
+		TextoLogin.setColumns(10);
 		
-		JLabel lblSejaBemVindo = new JLabel("Seja Bem Vindo!");
-		lblSejaBemVindo.setFont(new Font("Times New Roman", Font.BOLD, 19));
-		lblSejaBemVindo.setBounds(154, 11, 170, 20);
-		contentPane.add(lblSejaBemVindo);
+		JLabel TituSejaBemVindo = new JLabel("Seja Bem Vindo!");
+		TituSejaBemVindo.setFont(new Font("Times New Roman", Font.BOLD, 19));
+		TituSejaBemVindo.setBounds(154, 11, 170, 20);
+		contentPane.add(TituSejaBemVindo);
 		
-		JButton btnNewButton = new JButton("Cadastrar");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton BotaoCadastrar = new JButton("Cadastrar");
+		BotaoCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCadastroUsuario tl = new TelaCadastroUsuario();
 				tl.show();
@@ -128,8 +128,8 @@ public class TelaInicialLogin extends JFrame {
 				
 			}
 		});
-		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		btnNewButton.setBounds(313, 209, 100, 23);
-		contentPane.add(btnNewButton);
+		BotaoCadastrar.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoCadastrar.setBounds(313, 209, 100, 23);
+		contentPane.add(BotaoCadastrar);
 	}
 }

@@ -14,21 +14,21 @@ import java.awt.Font;
 public class TelaInicialCadastroPessoa extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JLabel lblRg;
-	private JLabel lblCpf;
-	private JLabel lblIdade;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JLabel lblDataNascimento;
-	private JTextField textField_8;
-	private JLabel lblCadastroDePessoa;
-	private JTextField textField_9;
+	private JTextField TextoNome;
+	private JTextField TextoEstadoCivil;
+	private JTextField TextoCidade;
+	private JTextField TextoEndereco;
+	private JTextField TextoNumero;
+	private JLabel Rg;
+	private JLabel Cpf;
+	private JLabel Idade;
+	private JTextField TextoDataNasc;
+	private JTextField TextoRg;
+	private JTextField TextoCpf;
+	private JLabel DataNascimento;
+	private JTextField TextoIdade;
+	private JLabel TituloCadastroDePessoa;
+	private JTextField TextoUf;
 
 	/**
 	 * Launch the application.
@@ -57,124 +57,124 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNome = new JLabel("Nome:");
-		lblNome.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblNome.setBounds(24, 54, 55, 14);
-		contentPane.add(lblNome);
+		JLabel Nome = new JLabel("Nome:");
+		Nome.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		Nome.setBounds(24, 54, 55, 14);
+		contentPane.add(Nome);
 		
-		textField = new JTextField();
-		textField.setBounds(90, 52, 298, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		TextoNome = new JTextField();
+		TextoNome.setBounds(90, 52, 298, 20);
+		contentPane.add(TextoNome);
+		TextoNome.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Estado Civil:");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblNewLabel.setBounds(14, 182, 80, 14);
-		contentPane.add(lblNewLabel);
+		JLabel Estadocivil = new JLabel("Estado Civil:");
+		Estadocivil.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		Estadocivil.setBounds(14, 182, 80, 14);
+		contentPane.add(Estadocivil);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(104, 180, 287, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		TextoEstadoCivil = new JTextField();
+		TextoEstadoCivil.setBounds(104, 180, 287, 20);
+		contentPane.add(TextoEstadoCivil);
+		TextoEstadoCivil.setColumns(10);
 		
-		JLabel lblCidade = new JLabel("Cidade:");
-		lblCidade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblCidade.setBounds(24, 140, 46, 14);
-		contentPane.add(lblCidade);
+		JLabel Cidade = new JLabel("Cidade:");
+		Cidade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		Cidade.setBounds(24, 140, 46, 14);
+		contentPane.add(Cidade);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(90, 138, 339, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		TextoCidade = new JTextField();
+		TextoCidade.setBounds(90, 138, 339, 20);
+		contentPane.add(TextoCidade);
+		TextoCidade.setColumns(10);
 		
-		JLabel lblEndereo = new JLabel("Endere\u00E7o:");
-		lblEndereo.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblEndereo.setBounds(21, 93, 80, 14);
-		contentPane.add(lblEndereo);
+		JLabel Endereo = new JLabel("Endere\u00E7o:");
+		Endereo.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		Endereo.setBounds(21, 93, 80, 14);
+		contentPane.add(Endereo);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(90, 91, 380, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		TextoEndereco = new JTextField();
+		TextoEndereco.setBounds(90, 91, 380, 20);
+		contentPane.add(TextoEndereco);
+		TextoEndereco.setColumns(10);
 		
-		JLabel lblN = new JLabel("N\u00BA:");
-		lblN.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblN.setBounds(504, 93, 37, 14);
-		contentPane.add(lblN);
+		JLabel N = new JLabel("N\u00BA:");
+		N.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		N.setBounds(504, 93, 37, 14);
+		contentPane.add(N);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(541, 91, 46, 20);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
+		TextoNumero = new JTextField();
+		TextoNumero.setBounds(541, 91, 46, 20);
+		contentPane.add(TextoNumero);
+		TextoNumero.setColumns(10);
 		
-		lblRg = new JLabel("Rg:");
-		lblRg.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblRg.setBounds(51, 210, 28, 20);
-		contentPane.add(lblRg);
+		Rg = new JLabel("Rg:");
+		Rg.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		Rg.setBounds(51, 210, 28, 20);
+		contentPane.add(Rg);
 		
-		lblCpf = new JLabel("Cpf:");
-		lblCpf.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblCpf.setBounds(237, 213, 55, 14);
-		contentPane.add(lblCpf);
+		Cpf = new JLabel("Cpf:");
+		Cpf.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		Cpf.setBounds(237, 213, 55, 14);
+		contentPane.add(Cpf);
 		
-		lblIdade = new JLabel("Idade:");
-		lblIdade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblIdade.setBounds(39, 254, 55, 14);
-		contentPane.add(lblIdade);
+		Idade = new JLabel("Idade:");
+		Idade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		Idade.setBounds(39, 254, 55, 14);
+		contentPane.add(Idade);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(90, 300, 147, 20);
-		contentPane.add(textField_5);
-		textField_5.setColumns(10);
+		TextoDataNasc = new JTextField();
+		TextoDataNasc.setBounds(90, 300, 147, 20);
+		contentPane.add(TextoDataNasc);
+		TextoDataNasc.setColumns(10);
 		
-		textField_6 = new JTextField();
-		textField_6.setBounds(90, 211, 125, 20);
-		contentPane.add(textField_6);
-		textField_6.setColumns(10);
+		TextoRg = new JTextField();
+		TextoRg.setBounds(90, 211, 125, 20);
+		contentPane.add(TextoRg);
+		TextoRg.setColumns(10);
 		
-		textField_7 = new JTextField();
-		textField_7.setBounds(279, 211, 125, 20);
-		contentPane.add(textField_7);
-		textField_7.setColumns(10);
+		TextoCpf = new JTextField();
+		TextoCpf.setBounds(279, 211, 125, 20);
+		contentPane.add(TextoCpf);
+		TextoCpf.setColumns(10);
 		
-		lblDataNascimento = new JLabel("Data Nasc.");
-		lblDataNascimento.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblDataNascimento.setBounds(14, 302, 80, 14);
-		contentPane.add(lblDataNascimento);
+		DataNascimento = new JLabel("Data Nasc.");
+		DataNascimento.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		DataNascimento.setBounds(14, 302, 80, 14);
+		contentPane.add(DataNascimento);
 		
-		textField_8 = new JTextField();
-		textField_8.setBounds(90, 252, 86, 20);
-		contentPane.add(textField_8);
-		textField_8.setColumns(10);
+		TextoIdade = new JTextField();
+		TextoIdade.setBounds(90, 252, 86, 20);
+		contentPane.add(TextoIdade);
+		TextoIdade.setColumns(10);
 		
-		JButton btnSalvar = new JButton("Salvar");
-		btnSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		btnSalvar.setBounds(51, 363, 114, 23);
-		contentPane.add(btnSalvar);
+		JButton BotaoSalvar = new JButton("Salvar");
+		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoSalvar.setBounds(51, 363, 114, 23);
+		contentPane.add(BotaoSalvar);
 		
-		JButton btnLimpar = new JButton("Limpar");
-		btnLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		btnLimpar.setBounds(219, 363, 136, 23);
-		contentPane.add(btnLimpar);
+		JButton BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoLimpar.setBounds(219, 363, 136, 23);
+		contentPane.add(BotaoLimpar);
 		
-		JButton btnCancelar = new JButton("Cancelar");
-		btnCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		btnCancelar.setBounds(426, 363, 131, 23);
-		contentPane.add(btnCancelar);
+		JButton BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoCancelar.setBounds(426, 363, 131, 23);
+		contentPane.add(BotaoCancelar);
 		
-		lblCadastroDePessoa = new JLabel("Cadastro De Pessoa");
-		lblCadastroDePessoa.setFont(new Font("Times New Roman", Font.BOLD, 18));
-		lblCadastroDePessoa.setBounds(145, 11, 222, 30);
-		contentPane.add(lblCadastroDePessoa);
+		TituloCadastroDePessoa = new JLabel("Cadastro De Pessoa");
+		TituloCadastroDePessoa.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		TituloCadastroDePessoa.setBounds(145, 11, 222, 30);
+		contentPane.add(TituloCadastroDePessoa);
 		
-		JLabel lblUf = new JLabel("Uf:");
-		lblUf.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblUf.setBounds(454, 140, 37, 14);
-		contentPane.add(lblUf);
+		JLabel Uf = new JLabel("Uf:");
+		Uf.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		Uf.setBounds(454, 140, 37, 14);
+		contentPane.add(Uf);
 		
-		textField_9 = new JTextField();
-		textField_9.setBounds(501, 138, 86, 20);
-		contentPane.add(textField_9);
-		textField_9.setColumns(10);
+		TextoUf = new JTextField();
+		TextoUf.setBounds(501, 138, 86, 20);
+		contentPane.add(TextoUf);
+		TextoUf.setColumns(10);
 	}
 }

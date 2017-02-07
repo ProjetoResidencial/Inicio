@@ -15,11 +15,11 @@ import javax.swing.JButton;
 public class TelaInicialDespesasVariaveis extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_4;
-	private JTextField textField_6;
+	private JTextField TextoMesRefe;
+	private JTextField TextoValorManutencao;
+	private JTextField TxtGrandeMan;
+	private JTextField TxtGrandeAlim;
+	private JTextField TextoValorAlimentacao;
 
 	/**
 	 * Launch the application.
@@ -48,74 +48,74 @@ public class TelaInicialDespesasVariaveis extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblMsDeReferncia = new JLabel("M\u00EAs De Refer\u00EAncia:");
-		lblMsDeReferncia.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblMsDeReferncia.setBounds(241, 58, 126, 14);
-		contentPane.add(lblMsDeReferncia);
+		JLabel MesDeReferncia = new JLabel("M\u00EAs De Refer\u00EAncia:");
+		MesDeReferncia.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		MesDeReferncia.setBounds(241, 58, 126, 14);
+		contentPane.add(MesDeReferncia);
 		
-		textField = new JTextField();
-		textField.setBounds(377, 56, 126, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		TextoMesRefe = new JTextField();
+		TextoMesRefe.setBounds(377, 56, 126, 20);
+		contentPane.add(TextoMesRefe);
+		TextoMesRefe.setColumns(10);
 		
-		JLabel lblManuteno = new JLabel("Valor Manuten\u00E7\u00E3o:");
-		lblManuteno.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblManuteno.setBounds(10, 58, 116, 14);
-		contentPane.add(lblManuteno);
+		JLabel ValorManutencao = new JLabel("Valor Manuten\u00E7\u00E3o:");
+		ValorManutencao.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		ValorManutencao.setBounds(10, 58, 116, 14);
+		contentPane.add(ValorManutencao);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(136, 56, 70, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		TextoValorManutencao = new JTextField();
+		TextoValorManutencao.setBounds(136, 56, 70, 20);
+		contentPane.add(TextoValorManutencao);
+		TextoValorManutencao.setColumns(10);
 		
-		JLabel lblObservao = new JLabel("Observa\u00E7\u00F5es:");
-		lblObservao.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblObservao.setBounds(10, 83, 91, 14);
-		contentPane.add(lblObservao);
+		JLabel ObservacoesManutencao = new JLabel("Observa\u00E7\u00F5es:");
+		ObservacoesManutencao.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		ObservacoesManutencao.setBounds(10, 83, 91, 14);
+		contentPane.add(ObservacoesManutencao);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(10, 108, 528, 95);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		TxtGrandeMan = new JTextField();
+		TxtGrandeMan.setBounds(10, 108, 528, 95);
+		contentPane.add(TxtGrandeMan);
+		TxtGrandeMan.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Valor Alimenta\u00E7\u00E3o:");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblNewLabel.setBounds(10, 214, 116, 14);
-		contentPane.add(lblNewLabel);
+		JLabel ValorAlimentacao = new JLabel("Valor Alimenta\u00E7\u00E3o:");
+		ValorAlimentacao.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		ValorAlimentacao.setBounds(10, 214, 116, 14);
+		contentPane.add(ValorAlimentacao);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(10, 264, 528, 100);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
+		TxtGrandeAlim = new JTextField();
+		TxtGrandeAlim.setBounds(10, 264, 528, 100);
+		contentPane.add(TxtGrandeAlim);
+		TxtGrandeAlim.setColumns(10);
 		
-		JLabel lblObservaes = new JLabel("Observa\u00E7\u00F5es:");
-		lblObservaes.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblObservaes.setBounds(10, 239, 106, 14);
-		contentPane.add(lblObservaes);
+		JLabel ObservacoesAlimentacao = new JLabel("Observa\u00E7\u00F5es:");
+		ObservacoesAlimentacao.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		ObservacoesAlimentacao.setBounds(10, 239, 106, 14);
+		contentPane.add(ObservacoesAlimentacao);
 		
-		textField_6 = new JTextField();
-		textField_6.setBounds(136, 212, 70, 20);
-		contentPane.add(textField_6);
-		textField_6.setColumns(10);
+		TextoValorAlimentacao = new JTextField();
+		TextoValorAlimentacao.setBounds(136, 212, 70, 20);
+		contentPane.add(TextoValorAlimentacao);
+		TextoValorAlimentacao.setColumns(10);
 		
-		JButton btnSalvar = new JButton("Salvar");
-		btnSalvar.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnSalvar.setBounds(37, 375, 89, 23);
-		contentPane.add(btnSalvar);
+		JButton BotaoSalvar = new JButton("Salvar");
+		BotaoSalvar.setFont(new Font("Tahoma", Font.BOLD, 15));
+		BotaoSalvar.setBounds(37, 375, 89, 23);
+		contentPane.add(BotaoSalvar);
 		
-		JButton btnLimpar = new JButton("Limpar");
-		btnLimpar.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnLimpar.setBounds(213, 375, 89, 23);
-		contentPane.add(btnLimpar);
+		JButton BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.setFont(new Font("Tahoma", Font.BOLD, 15));
+		BotaoLimpar.setBounds(213, 375, 89, 23);
+		contentPane.add(BotaoLimpar);
 		
-		JButton btnCancelar = new JButton("Cancelar");
-		btnCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		btnCancelar.setBounds(377, 376, 110, 23);
-		contentPane.add(btnCancelar);
+		JButton BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoCancelar.setBounds(377, 376, 110, 23);
+		contentPane.add(BotaoCancelar);
 		
-		JLabel lblValoresDeDespesas = new JLabel("Valores De Despesas Variaveis No M\u00EAs.");
-		lblValoresDeDespesas.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblValoresDeDespesas.setBounds(118, 11, 317, 27);
-		contentPane.add(lblValoresDeDespesas);
+		JLabel TituloValoresDeDespesas = new JLabel("Valores De Despesas Variaveis No M\u00EAs.");
+		TituloValoresDeDespesas.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		TituloValoresDeDespesas.setBounds(118, 11, 317, 27);
+		contentPane.add(TituloValoresDeDespesas);
 	}
 }

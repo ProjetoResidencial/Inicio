@@ -16,8 +16,8 @@ import java.awt.event.ActionEvent;
 public class TelaCadastroUsuario extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField TextoUsuario;
+	private JTextField TextoSenha;
 
 	/**
 	 * Launch the application.
@@ -53,41 +53,54 @@ public class TelaCadastroUsuario extends JFrame {
 		lblUsuario.setBounds(117, 68, 75, 17);
 		contentPane.add(lblUsuario);
 		
-		textField = new JTextField();
-		textField.setBounds(202, 66, 151, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		TextoUsuario = new JTextField();
+		TextoUsuario.setBounds(202, 66, 151, 20);
+		contentPane.add(TextoUsuario);
+		TextoUsuario.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("SENHA:");
 		lblSenha.setFont(new Font("Times New Roman", Font.BOLD, 12));
 		lblSenha.setBounds(117, 118, 56, 14);
 		contentPane.add(lblSenha);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(202, 115, 151, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		TextoSenha = new JTextField();
+		TextoSenha.setBounds(202, 115, 151, 20);
+		contentPane.add(TextoSenha);
+		TextoSenha.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Salvar");
-		btnNewButton.setBounds(30, 227, 89, 23);
-		contentPane.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("Limpar");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton BotaoSalvar = new JButton("Salvar");
+		BotaoSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				//evento do botao salvar
+			}
+		});
+		BotaoSalvar.setBounds(30, 227, 89, 23);
+		contentPane.add(BotaoSalvar);
+		
+		JButton BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TextoUsuario.setText("");
+				TextoSenha.setText("");
+				
+				
+				
+					//tf_nome.setText(null);
+				
 				
 			}
 		});
-		btnNewButton_1.setBounds(172, 227, 89, 23);
-		contentPane.add(btnNewButton_1);
+		BotaoLimpar.setBounds(172, 227, 89, 23);
+		contentPane.add(BotaoLimpar);
 		
-		JButton btnNewButton_2 = new JButton("Cancelar");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		btnNewButton_2.setBounds(313, 227, 89, 23);
-		contentPane.add(btnNewButton_2);
+		BotaoCancelar.setBounds(313, 227, 89, 23);
+		contentPane.add(BotaoCancelar);
 	}
 }
