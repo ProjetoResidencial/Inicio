@@ -1,4 +1,4 @@
-package classes;
+package com.classes.model;
 
 public class CadastroResidencia {
 

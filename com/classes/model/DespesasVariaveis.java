@@ -1,4 +1,4 @@
-package classes;
+package com.classes.model;
 
 import org.omg.Messaging.SyncScopeHelper;
 
