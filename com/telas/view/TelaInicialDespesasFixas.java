@@ -11,8 +11,10 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class TelaInicalDespesasFixas extends JFrame {
+public class TelaInicialDespesasFixas extends JFrame {
 
 	private JPanel MesReferencia;
 	private JTextField TextoMesDeReferencia;
@@ -30,7 +32,7 @@ public class TelaInicalDespesasFixas extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaInicalDespesasFixas frame = new TelaInicalDespesasFixas();
+					TelaInicialDespesasFixas frame = new TelaInicialDespesasFixas();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,7 +45,7 @@ public class TelaInicalDespesasFixas extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TelaInicalDespesasFixas() {
+	public TelaInicialDespesasFixas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 519, 397);
 		MesReferencia = new JPanel();
@@ -127,11 +129,27 @@ public class TelaInicalDespesasFixas extends JFrame {
 		MesReferencia.add(BotaoSalvar);
 		
 		JButton BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TextoMesDeReferencia.setText("");
+				TextoValorAgua.setText("");
+				TextoValorEnergia.setText("");
+				TextoValorTelefone.setText("");
+				TextoValorAluguel.setText("");
+				TextoValorCondominio.setText("");
+				TextoValorInternet.setText("");
+			}
+		});
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoLimpar.setBounds(171, 324, 89, 23);
 		MesReferencia.add(BotaoLimpar);
 		
 		JButton BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoCancelar.setBounds(320, 324, 104, 23);
 		MesReferencia.add(BotaoCancelar);

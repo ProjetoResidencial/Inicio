@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaInicialCadastroResidencia extends JFrame {
 
@@ -152,11 +154,29 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		contentPane.add(BotaoSalvar);
 		
 		BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TextoCidade.setText("");
+				TextoEndereco.setText("");
+				TextoN.setText("");
+				TextoCep.setText("");
+				TextoTipoDeResidencia.setText("");
+				TextoNomeDoPredio.setText("");
+				TextoNomeDoCondominio.setText("");
+				TextoComplemento.setText("");
+				TextoResidenciaPropria.setText("");
+			}
+		});
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoLimpar.setBounds(208, 337, 89, 23);
 		contentPane.add(BotaoLimpar);
 		
 		BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoCancelar.setBounds(373, 337, 111, 23);
 		contentPane.add(BotaoCancelar);

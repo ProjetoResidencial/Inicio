@@ -10,6 +10,8 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaInicialCadastroPessoa extends JFrame {
 
@@ -153,11 +155,34 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		contentPane.add(BotaoSalvar);
 		
 		JButton BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				DataNascimento.setText("");
+				TextoIdade.setText("");
+				TextoCpf.setText("");
+				TextoRg.setText("");
+				TextoDataNasc.setText("");
+				Idade.setText("");
+				Cpf.setText("");
+				Rg.setText("");
+				TextoNumero.setText("");
+				TextoEndereco.setText("");
+				TextoCidade.setText("");
+				TextoEstadoCivil.setText("");
+				TextoNome.setText("");
+			}
+		});
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoLimpar.setBounds(219, 363, 136, 23);
 		contentPane.add(BotaoLimpar);
 		
 		JButton BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoCancelar.setBounds(426, 363, 131, 23);
 		contentPane.add(BotaoCancelar);

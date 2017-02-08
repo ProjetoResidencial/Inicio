@@ -11,6 +11,8 @@ import java.awt.Font;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaInicialDespesasVariaveis extends JFrame {
 
@@ -104,11 +106,25 @@ public class TelaInicialDespesasVariaveis extends JFrame {
 		contentPane.add(BotaoSalvar);
 		
 		JButton BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TextoMesRefe.setText("");
+				TextoValorManutencao.setText("");
+				TxtGrandeMan.setText("");
+				TxtGrandeAlim.setText("");
+				TextoValorAlimentacao.setText("");
+			}
+		});
 		BotaoLimpar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		BotaoLimpar.setBounds(213, 375, 89, 23);
 		contentPane.add(BotaoLimpar);
 		
 		JButton BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoCancelar.setBounds(377, 376, 110, 23);
 		contentPane.add(BotaoCancelar);
