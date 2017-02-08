@@ -45,7 +45,25 @@ public class TelaInicialCadastroPessoa extends JFrame {
 					e.printStackTrace();
 				}
 			}
+						
 		});
+	}
+	
+	public void novo(){
+		
+		//este metodo seta tudo em branco, será chamando no botao novo
+		
+		
+		TextoIdade.setText("");
+		TextoCpf.setText("");
+		TextoRg.setText("");
+		TextoDataNasc.setText("");
+		TextoNumero.setText("");
+		TextoEndereco.setText("");
+		TextoCidade.setText("");
+		TextoEstadoCivil.setText("");
+		TextoNome.setText("");
+		TextoUf.setText("");
 	}
 
 	/**
@@ -151,30 +169,29 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		
 		JButton BotaoSalvar = new JButton("Salvar");
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoSalvar.setBounds(51, 363, 114, 23);
+		BotaoSalvar.setBounds(39, 363, 114, 23);
 		contentPane.add(BotaoSalvar);
 		
 		JButton BotaoLimpar = new JButton("Limpar");
 		BotaoLimpar.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				
-				DataNascimento.setText("");
+				
 				TextoIdade.setText("");
 				TextoCpf.setText("");
 				TextoRg.setText("");
 				TextoDataNasc.setText("");
-				Idade.setText("");
-				Cpf.setText("");
-				Rg.setText("");
 				TextoNumero.setText("");
 				TextoEndereco.setText("");
 				TextoCidade.setText("");
 				TextoEstadoCivil.setText("");
 				TextoNome.setText("");
+				TextoUf.setText("");
 			}
 		});
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoLimpar.setBounds(219, 363, 136, 23);
+		BotaoLimpar.setBounds(339, 363, 131, 23);
 		contentPane.add(BotaoLimpar);
 		
 		JButton BotaoCancelar = new JButton("Cancelar");
@@ -184,7 +201,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 			}
 		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoCancelar.setBounds(426, 363, 131, 23);
+		BotaoCancelar.setBounds(506, 363, 131, 23);
 		contentPane.add(BotaoCancelar);
 		
 		TituloCadastroDePessoa = new JLabel("Cadastro De Pessoa");
@@ -197,9 +214,24 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		Uf.setBounds(454, 140, 37, 14);
 		contentPane.add(Uf);
 		
+	
+		
 		TextoUf = new JTextField();
 		TextoUf.setBounds(501, 138, 86, 20);
 		contentPane.add(TextoUf);
 		TextoUf.setColumns(10);
+		
+		JButton BotaoNovo = new JButton("Novo");
+		BotaoNovo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//chamando metodo que seta campos em branco
+				novo();
+				
+			}
+		});
+		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoNovo.setBounds(181, 363, 114, 23);
+		contentPane.add(BotaoNovo);
 	}
 }

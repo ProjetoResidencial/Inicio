@@ -25,9 +25,9 @@ public class TelaInicialDespesasFixas extends JFrame {
 	private JTextField TextoValorCondominio;
 	private JTextField TextoValorInternet;
 
-	/**
-	 * Launch the application.
-	 */
+	
+	
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -41,10 +41,19 @@ public class TelaInicialDespesasFixas extends JFrame {
 		});
 	}
 
-
-	/**
-	 * Create the frame.
-	 */
+	public void novo(){
+		
+		TextoMesDeReferencia.setText("");
+		TextoValorAgua.setText("");
+		TextoValorEnergia.setText("");
+		TextoValorTelefone.setText("");
+		TextoValorAluguel.setText("");
+		TextoValorCondominio.setText("");
+		TextoValorInternet.setText("");
+		
+	}
+	
+	
 	public TelaInicialDespesasFixas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 519, 397);
@@ -141,7 +150,7 @@ public class TelaInicialDespesasFixas extends JFrame {
 			}
 		});
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoLimpar.setBounds(171, 324, 89, 23);
+		BotaoLimpar.setBounds(253, 324, 89, 23);
 		MesReferencia.add(BotaoLimpar);
 		
 		JButton BotaoCancelar = new JButton("Cancelar");
@@ -151,12 +160,23 @@ public class TelaInicialDespesasFixas extends JFrame {
 			}
 		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoCancelar.setBounds(320, 324, 104, 23);
+		BotaoCancelar.setBounds(372, 324, 104, 23);
 		MesReferencia.add(BotaoCancelar);
 		
 		JLabel TextoTitulo = new JLabel("Valores De Despesas Fixas No M\u00EAs.");
 		TextoTitulo.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		TextoTitulo.setBounds(35, 9, 246, 14);
 		MesReferencia.add(TextoTitulo);
+		
+		JButton BotaoNovo = new JButton("Novo");
+		BotaoNovo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				novo();
+			}
+		});
+		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoNovo.setBounds(140, 324, 89, 23);
+		MesReferencia.add(BotaoNovo);
 	}
 }

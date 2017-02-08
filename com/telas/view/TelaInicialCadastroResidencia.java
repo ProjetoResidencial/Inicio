@@ -30,6 +30,7 @@ public class TelaInicialCadastroResidencia extends JFrame {
 	private JButton BotaoLimpar;
 	private JButton BotaoCancelar;
 	private JLabel lblCadastroDeResidncia;
+	private JButton BotaoNovo;
 
 	/**
 	 * Launch the application.
@@ -47,9 +48,21 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	public void novo(){
+		
+		TextoCidade.setText("");
+		TextoEndereco.setText("");
+		TextoN.setText("");
+		TextoCep.setText("");
+		TextoTipoDeResidencia.setText("");
+		TextoNomeDoPredio.setText("");
+		TextoNomeDoCondominio.setText("");
+		TextoComplemento.setText("");
+		TextoResidenciaPropria.setText("");
+		
+	}
+	
+	
 	public TelaInicialCadastroResidencia() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 552, 410);
@@ -149,7 +162,7 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		TextoComplemento.setColumns(10);
 		
 		BotaoSalvar = new JButton("Salvar");
-		BotaoSalvar.setFont(new Font("Tahoma", Font.BOLD, 15));
+		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoSalvar.setBounds(33, 337, 89, 23);
 		contentPane.add(BotaoSalvar);
 		
@@ -168,7 +181,7 @@ public class TelaInicialCadastroResidencia extends JFrame {
 			}
 		});
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoLimpar.setBounds(208, 337, 89, 23);
+		BotaoLimpar.setBounds(272, 338, 89, 23);
 		contentPane.add(BotaoLimpar);
 		
 		BotaoCancelar = new JButton("Cancelar");
@@ -178,13 +191,23 @@ public class TelaInicialCadastroResidencia extends JFrame {
 			}
 		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoCancelar.setBounds(373, 337, 111, 23);
+		BotaoCancelar.setBounds(396, 338, 111, 23);
 		contentPane.add(BotaoCancelar);
 		
 		lblCadastroDeResidncia = new JLabel("Cadastro De Resid\u00EAncia");
 		lblCadastroDeResidncia.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		lblCadastroDeResidncia.setBounds(154, 21, 268, 14);
 		contentPane.add(lblCadastroDeResidncia);
+		
+		BotaoNovo = new JButton("Novo");
+		BotaoNovo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				novo();
+			}
+		});
+		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoNovo.setBounds(154, 337, 89, 23);
+		contentPane.add(BotaoNovo);
 	}
 
 }

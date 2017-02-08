@@ -39,9 +39,18 @@ public class TelaInicialDespesasVariaveis extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	
+	public void novo(){
+		
+		TextoMesRefe.setText("");
+		TextoValorManutencao.setText("");
+		TxtGrandeMan.setText("");
+		TxtGrandeAlim.setText("");
+		TextoValorAlimentacao.setText("");
+		
+	}
+	
+	
 	public TelaInicialDespesasVariaveis() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 580, 448);
@@ -101,7 +110,7 @@ public class TelaInicialDespesasVariaveis extends JFrame {
 		TextoValorAlimentacao.setColumns(10);
 		
 		JButton BotaoSalvar = new JButton("Salvar");
-		BotaoSalvar.setFont(new Font("Tahoma", Font.BOLD, 15));
+		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoSalvar.setBounds(37, 375, 89, 23);
 		contentPane.add(BotaoSalvar);
 		
@@ -115,8 +124,8 @@ public class TelaInicialDespesasVariaveis extends JFrame {
 				TextoValorAlimentacao.setText("");
 			}
 		});
-		BotaoLimpar.setFont(new Font("Tahoma", Font.BOLD, 15));
-		BotaoLimpar.setBounds(213, 375, 89, 23);
+		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoLimpar.setBounds(278, 375, 89, 23);
 		contentPane.add(BotaoLimpar);
 		
 		JButton BotaoCancelar = new JButton("Cancelar");
@@ -126,12 +135,23 @@ public class TelaInicialDespesasVariaveis extends JFrame {
 			}
 		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoCancelar.setBounds(377, 376, 110, 23);
+		BotaoCancelar.setBounds(412, 375, 110, 23);
 		contentPane.add(BotaoCancelar);
 		
 		JLabel TituloValoresDeDespesas = new JLabel("Valores De Despesas Variaveis No M\u00EAs.");
 		TituloValoresDeDespesas.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		TituloValoresDeDespesas.setBounds(118, 11, 317, 27);
 		contentPane.add(TituloValoresDeDespesas);
+		
+		JButton BotaoNovo = new JButton("Novo");
+		BotaoNovo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				novo();
+			}
+		});
+		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoNovo.setBounds(155, 375, 89, 23);
+		contentPane.add(BotaoNovo);
 	}
 }

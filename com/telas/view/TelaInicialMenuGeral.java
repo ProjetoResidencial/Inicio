@@ -55,7 +55,7 @@ public class TelaInicialMenuGeral extends JFrame {
 				TelaInicialCadastroResidencia tl = new TelaInicialCadastroResidencia();
 				tl.show();
 				tl.setExtendedState(new TelaInicialCadastroResidencia().MOVE_CURSOR);
-				dispose();
+				//dispose();
 			}
 		});
 		mntmCadastroDeResidncia.setFont(new Font("Times New Roman", Font.BOLD, 12));
@@ -67,7 +67,7 @@ public class TelaInicialMenuGeral extends JFrame {
 				TelaInicialCadastroPessoa tl = new TelaInicialCadastroPessoa();
 				tl.show();
 				tl.setExtendedState(new TelaInicialCadastroPessoa().MOVE_CURSOR);
-				dispose();
+				//dispose();
 			}
 		});
 		mntmCadastroDePessoas.setFont(new Font("Times New Roman", Font.BOLD, 12));
@@ -79,7 +79,7 @@ public class TelaInicialMenuGeral extends JFrame {
 				TelaCadastroUsuario tl = new TelaCadastroUsuario ();
 				tl.show();
 				tl.setExtendedState(new TelaCadastroUsuario().MOVE_CURSOR);
-				dispose();
+				//dispose();
 				
 				
 			}
@@ -93,7 +93,7 @@ public class TelaInicialMenuGeral extends JFrame {
 				TelaInicialDespesasFixas tl = new TelaInicialDespesasFixas ();
 				tl.show();
 				tl.setExtendedState(new TelaInicialDespesasFixas().MOVE_CURSOR);
-				dispose();
+				//dispose();
 				
 			}
 		});

@@ -35,14 +35,18 @@ public class TelaCadastroUsuario extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	public void novo(){
+		
+		TextoUsuario.setText("");
+		TextoSenha.setText("");
+		
+		
+	}
 	public TelaCadastroUsuario() {
 		setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		setTitle("Cadastro De Usuario/Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 469, 313);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -50,35 +54,37 @@ public class TelaCadastroUsuario extends JFrame {
 		
 		JLabel lblUsuario = new JLabel("USU\u00C1RIO:");
 		lblUsuario.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		lblUsuario.setBounds(117, 68, 75, 17);
+		lblUsuario.setBounds(71, 68, 75, 17);
 		contentPane.add(lblUsuario);
 		
 		TextoUsuario = new JTextField();
-		TextoUsuario.setBounds(202, 66, 151, 20);
+		TextoUsuario.setBounds(156, 66, 151, 20);
 		contentPane.add(TextoUsuario);
 		TextoUsuario.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("SENHA:");
 		lblSenha.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		lblSenha.setBounds(117, 118, 56, 14);
+		lblSenha.setBounds(71, 118, 56, 14);
 		contentPane.add(lblSenha);
 		
 		TextoSenha = new JTextField();
-		TextoSenha.setBounds(202, 115, 151, 20);
+		TextoSenha.setBounds(156, 115, 151, 20);
 		contentPane.add(TextoSenha);
 		TextoSenha.setColumns(10);
 		
 		JButton BotaoSalvar = new JButton("Salvar");
+		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				//evento do botao salvar
 			}
 		});
-		BotaoSalvar.setBounds(30, 227, 89, 23);
+		BotaoSalvar.setBounds(10, 227, 89, 23);
 		contentPane.add(BotaoSalvar);
 		
 		JButton BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TextoUsuario.setText("");
@@ -91,16 +97,28 @@ public class TelaCadastroUsuario extends JFrame {
 				
 			}
 		});
-		BotaoLimpar.setBounds(172, 227, 89, 23);
+		BotaoLimpar.setBounds(221, 227, 103, 23);
 		contentPane.add(BotaoLimpar);
 		
 		JButton BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		BotaoCancelar.setBounds(313, 227, 89, 23);
+		BotaoCancelar.setBounds(334, 227, 109, 23);
 		contentPane.add(BotaoCancelar);
+		
+		JButton BotaoNovo = new JButton("Novo");
+		BotaoNovo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				novo();
+			}
+		});
+		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		BotaoNovo.setBounds(109, 227, 102, 23);
+		contentPane.add(BotaoNovo);
 	}
 }
