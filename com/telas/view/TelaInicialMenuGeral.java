@@ -73,20 +73,6 @@ public class TelaInicialMenuGeral extends JFrame {
 		mntmCadastroDePessoas.setFont(new Font("Times New Roman", Font.BOLD, 12));
 		MenuCadastros.add(mntmCadastroDePessoas);
 		
-		JMenuItem mntmCadastroDeUsurios = new JMenuItem("- Usu\u00E1rios");
-		mntmCadastroDeUsurios.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				TelaCadastroUsuario tl = new TelaCadastroUsuario ();
-				tl.show();
-				tl.setExtendedState(new TelaCadastroUsuario().MOVE_CURSOR);
-				//dispose();
-				
-				
-			}
-		});
-		mntmCadastroDeUsurios.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		MenuCadastros.add(mntmCadastroDeUsurios);
-		
 		JMenuItem mntmDespesasFixas = new JMenuItem("- Desp. Fixas");
 		mntmDespesasFixas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
