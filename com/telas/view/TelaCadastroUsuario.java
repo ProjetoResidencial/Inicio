@@ -104,7 +104,11 @@ public class TelaCadastroUsuario extends JFrame {
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+				
+				TelaInicialLogin tl = new TelaInicialLogin();
+				tl.show();
+				tl.setExtendedState( new TelaInicialLogin().MOVE_CURSOR);
+				dispose();
 			}
 		});
 		BotaoCancelar.setBounds(334, 227, 109, 23);

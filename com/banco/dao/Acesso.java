@@ -8,12 +8,13 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 import java.sql.Statement;
+
 public class Acesso {
 
 	public boolean acesso;
 
 	// gerencia conexao
-	Connection conn = null;
+	Connection conexao = null;
 	// gerencia consulta
 	Statement consulta = null;
 	// gerencia consulta do tipo select
@@ -22,25 +23,24 @@ public class Acesso {
 	public void Acesso(String login, String senha) {
 
 		try {
-			
+
 			// chamando driver do banco
 			Class.forName("com.mysql.jdbc.Driver");
-			
+
 			// conectando com a tabela
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");
-			
-			consulta = (Statement) conn.createStatement();
-			
+			conexao = DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");
+
+			consulta = (Statement) conexao.createStatement();
+
 			tabela = consulta.executeQuery(
-					"select login, senha from tbl_usuario where login='" +login+ "'and senha='" + senha + "'");
-			
+					"select login, senha from tbl_usuario where login='" + login + "'and senha='" + senha + "'");
+
 			if (tabela.next()) {
 				JOptionPane.showMessageDialog(null, "Banco com Dados Conectado com Sucesso");
 				JOptionPane.showMessageDialog(null, "Usuário e Senha estão Corretos!");
-								
+
 				acesso = true;
-				
-				
+
 			} else {
 				JOptionPane.showMessageDialog(null, "Usuario ou Senha Incorreto!");
 				acesso = false;
@@ -53,12 +53,20 @@ public class Acesso {
 
 	}
 
+	
+
 	public boolean estaConectado() {
-		if (this.conn != null) {
+		if (this.conexao != null) {
 			JOptionPane.showMessageDialog(null, "Banco com Dados Conectado com Sucesso");
 			return true;
 		} else {
 			return false;
 		}
 	}
+	
+	
+	
+	
+	
+	
 }
