@@ -156,7 +156,11 @@ public class TelaInicialDespesasFixas extends JFrame {
 		JButton BotaoCancelar = new JButton("Cancelar");
 		BotaoCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+				
+				TelaInicialMenuGeral tl = new TelaInicialMenuGeral();
+				tl.show();
+				tl.setExtendedState(new TelaInicialMenuGeral().MOVE_CURSOR);
+				dispose();
 			}
 		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
