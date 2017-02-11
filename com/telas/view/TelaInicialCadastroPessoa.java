@@ -7,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -24,21 +23,35 @@ import java.awt.event.ActionEvent;
 public class TelaInicialCadastroPessoa extends JFrame {
 
 	private JPanel contentPane;
+	private JLabel Nome;
 	private JTextField TextoNome;
+	private JLabel EstadoCivil;	
 	private JTextField TextoEstadoCivil;
-	private JTextField TextoCidade;
-	private JTextField TextoEndereco;
-	private JTextField TextoNumero;
-	private JLabel Rg;
-	private JLabel Cpf;
-	private JLabel Idade;
-	private JTextField TextoDataNasc;
-	private JTextField TextoRg;
-	private JTextField TextoCpf;
 	private JLabel DataNascimento;
+	private JTextField TextoDataNasc;
+	private JLabel Rg;
+	private JTextField TextoRg;
+	private JLabel Cpf;
+	private JTextField TextoCpf;
+	private JLabel Idade;
 	private JTextField TextoIdade;
+	private JLabel Cidade;	
+	private JTextField TextoCidade;
+	private JLabel Endereco;
+	private JTextField TextoEndereco;
+	private JLabel Numero;
+	private JTextField TextoNumero;
+	private JLabel Uf;	
+	private JTextField TextoUf;	
+		
+	
 	private JLabel TituloCadastroDePessoa;
-	private JTextField TextoUf;
+
+	
+	
+	
+	
+	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -57,33 +70,39 @@ public class TelaInicialCadastroPessoa extends JFrame {
 
 	}
 
-	public void salvar(){
-		
-		try {
-		
-		Class.forName("com.mysql.jdbc.Driver");	
-		
-		
-		Connection conector = DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");				
-		
-		Statement stm;
-		
-		stm = conector.createStatement();
-		
-		stm.executeUpdate("insert into cadastro_pessoa (nome, endereco, numero, cidade, estado_civil, rg, cpf, idade, data_nascimento, uf)"
-				
-				+ "VALUES("+TextoNome.getSelectedText()+","+TextoEndereco.getSelectedText()+","+TextoNumero.getSelectedText()+","+TextoCidade.getSelectedText()+","+TextoEstadoCivil.getSelectedText()+","+TextoRg.getSelectedText()
-				+","+TextoCpf.getSelectedText()+","+TextoIdade.getSelectedText()+","+TextoDataNasc.getSelectedText()+","+TextoUf.getSelectedText()+")");
-		stm.close();
-				
-		} catch (Exception e) {
-			System.out.println("Erro:" + e.getMessage());
-
-		}
-
-	}
-		
-
+	/*
+	 * public void salvar(){
+	 * 
+	 * try {
+	 * 
+	 * Class.forName("com.mysql.jdbc.Driver");
+	 * 
+	 * 
+	 * Connection conector =
+	 * DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");
+	 * 
+	 * Statement stm;
+	 * 
+	 * stm = conector.createStatement();
+	 * 
+	 * stm.
+	 * executeUpdate("insert into cadastro_pessoa (nome, endereco, numero, cidade, estado_civil, rg, cpf, idade, data_nascimento, uf)"
+	 * 
+	 * +
+	 * "VALUES("+TextoNome.getText()+","+TextoEndereco.getText()+","+TextoNumero
+	 * .getText()+","+TextoCidade.getText()+","+TextoEstadoCivil.getText()+","+
+	 * TextoRg.getText()
+	 * +","+TextoCpf.getText()+","+TextoIdade.getText()+","+TextoDataNasc.
+	 * getText()+","+TextoUf.getText()+")");
+	 * 
+	 * stm.close();
+	 * 
+	 * } catch (Exception e) { System.out.println("Erro:" + e.getMessage());
+	 * 
+	 * }
+	 * 
+	 * }
+	 */
 
 	public void novo() {
 
@@ -128,21 +147,21 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		TextoEstadoCivil.setBounds(104, 180, 287, 20);
 		contentPane.add(TextoEstadoCivil);
 		TextoEstadoCivil.setColumns(10);
-
-		JLabel Cidade = new JLabel("Cidade:");
-		Cidade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Cidade.setBounds(24, 140, 46, 14);
-		contentPane.add(Cidade);
-
-		TextoCidade = new JTextField();
-		TextoCidade.setBounds(90, 138, 339, 20);
-		contentPane.add(TextoCidade);
-		TextoCidade.setColumns(10);
-
-		JLabel Endereo = new JLabel("Endere\u00E7o:");
-		Endereo.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Endereo.setBounds(21, 93, 80, 14);
-		contentPane.add(Endereo);
+				
+						JLabel Cidade = new JLabel("Cidade:");
+						Cidade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+						Cidade.setBounds(24, 140, 46, 14);
+						contentPane.add(Cidade);
+		
+				TextoCidade = new JTextField();
+				TextoCidade.setBounds(90, 138, 339, 20);
+				contentPane.add(TextoCidade);
+				TextoCidade.setColumns(10);
+		
+				JLabel Endereo = new JLabel("Endere\u00E7o:");
+				Endereo.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+				Endereo.setBounds(21, 93, 80, 14);
+				contentPane.add(Endereo);
 
 		TextoEndereco = new JTextField();
 		TextoEndereco.setBounds(90, 91, 380, 20);
@@ -163,52 +182,78 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		Rg.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		Rg.setBounds(51, 210, 28, 20);
 		contentPane.add(Rg);
+		
+				TextoRg = new JTextField();
+				TextoRg.setBounds(90, 211, 125, 20);
+				contentPane.add(TextoRg);
+				TextoRg.setColumns(10);
 
 		Cpf = new JLabel("Cpf:");
 		Cpf.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		Cpf.setBounds(237, 213, 55, 14);
 		contentPane.add(Cpf);
+		
+				TextoCpf = new JTextField();
+				TextoCpf.setBounds(279, 211, 125, 20);
+				contentPane.add(TextoCpf);
+				TextoCpf.setColumns(10);
 
 		Idade = new JLabel("Idade:");
 		Idade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		Idade.setBounds(39, 254, 55, 14);
 		contentPane.add(Idade);
+		
+				TextoIdade = new JTextField();
+				TextoIdade.setBounds(90, 252, 86, 20);
+				contentPane.add(TextoIdade);
+				TextoIdade.setColumns(10);
+		
+				DataNascimento = new JLabel("Data Nasc.");
+				DataNascimento.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+				DataNascimento.setBounds(14, 302, 80, 14);
+				contentPane.add(DataNascimento);
 
 		TextoDataNasc = new JTextField();
 		TextoDataNasc.setBounds(90, 300, 147, 20);
 		contentPane.add(TextoDataNasc);
 		TextoDataNasc.setColumns(10);
 
-		TextoRg = new JTextField();
-		TextoRg.setBounds(90, 211, 125, 20);
-		contentPane.add(TextoRg);
-		TextoRg.setColumns(10);
-
-		TextoCpf = new JTextField();
-		TextoCpf.setBounds(279, 211, 125, 20);
-		contentPane.add(TextoCpf);
-		TextoCpf.setColumns(10);
-
-		DataNascimento = new JLabel("Data Nasc.");
-		DataNascimento.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		DataNascimento.setBounds(14, 302, 80, 14);
-		contentPane.add(DataNascimento);
-
-		TextoIdade = new JTextField();
-		TextoIdade.setBounds(90, 252, 86, 20);
-		contentPane.add(TextoIdade);
-		TextoIdade.setColumns(10);
-
 		JButton BotaoSalvar = new JButton("Salvar");
 		BotaoSalvar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			
+			public void actionPerformed(ActionEvent e) {		
 				
-				salvar();
+					try {				
+					
+					Class.forName("com.mysql.jdbc.Driver");				
+					
+					Connection conector = DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");				
+					
+					Statement stm;
+					
+					stm = conector.createStatement();
+					
+					
+				stm.executeUpdate ("INSERT into cadastro_pessoa (nome, endereco, numero, cidade, estado_civil, rg, cpf, idade, data_nascimento, uf) VALUES ('"+TextoNome.getText()+"','"+TextoEndereco.getText()+"','"+TextoNumero.getText()+"','"+TextoCidade.getText()+"','"+TextoEstadoCivil.getText()+"','"+TextoRg.getText()+"','"+TextoCpf.getText()+"','"+TextoIdade.getText()+"','"+TextoDataNasc.getText()+"','"+TextoUf.getText()+"')"); 
+		
+			
+			
+					} catch (Exception e1) {
+								System.out.println("Erro: " + e1.getMessage());
 
-				//JOptionPane.showMessageDialog(null, "Cadastro Salvo Com Sucesso");
+					}
+			
 
-			}
-		});
+			}});
+		
+				TituloCadastroDePessoa = new JLabel("Cadastro De Pessoa");
+				TituloCadastroDePessoa.setFont(new Font("Times New Roman", Font.BOLD, 18));
+				TituloCadastroDePessoa.setBounds(145, 11, 222, 30);
+				contentPane.add(TituloCadastroDePessoa);
+			
+			//tring sql = "insert into contatos " + "(nome,email,endereco, dataNascimento)" + " values ('" + nome + "', '" + email + "', '" +endereco + "', '"+ dataNascimento +"')";
+	
+		
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoSalvar.setBounds(39, 363, 114, 23);
 		contentPane.add(BotaoSalvar);
@@ -230,6 +275,16 @@ public class TelaInicialCadastroPessoa extends JFrame {
 				TextoUf.setText("");
 			}
 		});
+		
+				JLabel Uf = new JLabel("Uf:");
+				Uf.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+				Uf.setBounds(454, 140, 37, 14);
+				contentPane.add(Uf);
+		
+				TextoUf = new JTextField();
+				TextoUf.setBounds(501, 138, 86, 20);
+				contentPane.add(TextoUf);
+				TextoUf.setColumns(10);
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoLimpar.setBounds(339, 363, 131, 23);
 		contentPane.add(BotaoLimpar);
@@ -248,21 +303,6 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoCancelar.setBounds(506, 363, 131, 23);
 		contentPane.add(BotaoCancelar);
-
-		TituloCadastroDePessoa = new JLabel("Cadastro De Pessoa");
-		TituloCadastroDePessoa.setFont(new Font("Times New Roman", Font.BOLD, 18));
-		TituloCadastroDePessoa.setBounds(145, 11, 222, 30);
-		contentPane.add(TituloCadastroDePessoa);
-
-		JLabel Uf = new JLabel("Uf:");
-		Uf.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Uf.setBounds(454, 140, 37, 14);
-		contentPane.add(Uf);
-
-		TextoUf = new JTextField();
-		TextoUf.setBounds(501, 138, 86, 20);
-		contentPane.add(TextoUf);
-		TextoUf.setColumns(10);
 
 		JButton BotaoNovo = new JButton("Novo");
 		BotaoNovo.addActionListener(new ActionListener() {
