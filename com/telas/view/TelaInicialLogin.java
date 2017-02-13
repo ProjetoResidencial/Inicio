@@ -23,9 +23,6 @@ public class TelaInicialLogin extends JFrame {
 	private JPasswordField TextoSenha;
 	private JTextField TextoLogin;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

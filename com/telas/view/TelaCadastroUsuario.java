@@ -111,7 +111,7 @@ public class TelaCadastroUsuario extends JFrame {
 				TextoLogin.setText("");
 				TextoSenha.setText("");
 
-				// tf_nome.setText(null);
+				
 
 			}
 		});
