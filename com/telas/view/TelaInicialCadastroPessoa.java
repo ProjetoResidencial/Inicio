@@ -45,13 +45,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 	private JTextField TextoUf;	
 		
 	
-	private JLabel TituloCadastroDePessoa;
-
-	
-	
-	
-	
-	
+	private JLabel TituloCadastroDePessoa;	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -70,39 +64,8 @@ public class TelaInicialCadastroPessoa extends JFrame {
 
 	}
 
-	/*
-	 * public void salvar(){
-	 * 
-	 * try {
-	 * 
-	 * Class.forName("com.mysql.jdbc.Driver");
-	 * 
-	 * 
-	 * Connection conector =
-	 * DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");
-	 * 
-	 * Statement stm;
-	 * 
-	 * stm = conector.createStatement();
-	 * 
-	 * stm.
-	 * executeUpdate("insert into cadastro_pessoa (nome, endereco, numero, cidade, estado_civil, rg, cpf, idade, data_nascimento, uf)"
-	 * 
-	 * +
-	 * "VALUES("+TextoNome.getText()+","+TextoEndereco.getText()+","+TextoNumero
-	 * .getText()+","+TextoCidade.getText()+","+TextoEstadoCivil.getText()+","+
-	 * TextoRg.getText()
-	 * +","+TextoCpf.getText()+","+TextoIdade.getText()+","+TextoDataNasc.
-	 * getText()+","+TextoUf.getText()+")");
-	 * 
-	 * stm.close();
-	 * 
-	 * } catch (Exception e) { System.out.println("Erro:" + e.getMessage());
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
+
+	
 
 	public void novo() {
 
@@ -119,6 +82,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		TextoNome.setText("");
 		TextoUf.setText("");
 	}
+	
 
 	public TelaInicialCadastroPessoa() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -218,12 +182,15 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		contentPane.add(TextoDataNasc);
 		TextoDataNasc.setColumns(10);
 
+		/*
+		 
 		JButton BotaoSalvar = new JButton("Salvar");
 		BotaoSalvar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {		
 				
-					try {				
+					
+				try {				
 					
 					Class.forName("com.mysql.jdbc.Driver");				
 					
@@ -242,21 +209,26 @@ public class TelaInicialCadastroPessoa extends JFrame {
 								System.out.println("Erro: " + e1.getMessage());
 
 					}
+					
+					JOptionPane.showMessageDialog(null, "Cadastro gravado!");
 			
 
 			}});
+			
+			
 		
 				TituloCadastroDePessoa = new JLabel("Cadastro De Pessoa");
 				TituloCadastroDePessoa.setFont(new Font("Times New Roman", Font.BOLD, 18));
 				TituloCadastroDePessoa.setBounds(145, 11, 222, 30);
 				contentPane.add(TituloCadastroDePessoa);
 			
-			//tring sql = "insert into contatos " + "(nome,email,endereco, dataNascimento)" + " values ('" + nome + "', '" + email + "', '" +endereco + "', '"+ dataNascimento +"')";
-	
+				
 		
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoSalvar.setBounds(39, 363, 114, 23);
 		contentPane.add(BotaoSalvar);
+		
+		*/
 
 		JButton BotaoLimpar = new JButton("Limpar");
 		BotaoLimpar.addActionListener(new ActionListener() {
@@ -317,4 +289,4 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		BotaoNovo.setBounds(181, 363, 114, 23);
 		contentPane.add(BotaoNovo);
 	}
-}
+		}
