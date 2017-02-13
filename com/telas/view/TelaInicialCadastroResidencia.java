@@ -7,10 +7,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
 public class TelaInicialCadastroResidencia extends JFrame {
@@ -48,8 +52,8 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		});
 	}
 
-	public void novo(){
-		
+	public void novo() {
+
 		TextoCidade.setText("");
 		TextoEndereco.setText("");
 		TextoN.setText("");
@@ -59,10 +63,9 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		TextoNomeDoCondominio.setText("");
 		TextoComplemento.setText("");
 		TextoResidenciaPropria.setText("");
-		
+
 	}
-	
-	
+
 	public TelaInicialCadastroResidencia() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 552, 410);
@@ -162,13 +165,47 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		TextoComplemento.setColumns(10);
 		
 		BotaoSalvar = new JButton("Salvar");
+		BotaoSalvar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+					try {				
+					
+					Class.forName("com.mysql.jdbc.Driver");				
+					
+					Connection conector = DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");				
+					
+					Statement stm;
+					
+					stm = conector.createStatement();
+					
+					
+				stm.executeUpdate ("INSERT into cadastro_residencia (cidade, endereco, numero, cep, complemento, tipo_de_residencia, residencia_propria, nome_do_predio, nome_do_condominio) VALUES ('"+TextoCidade.getText()+"','"+TextoEndereco.getText()+"','"+TextoN.getText()+"','"+TextoCep.getText()+"','"+TextoComplemento.getText()+"','"+TextoTipoDeResidencia.getText()+"','"+TextoResidenciaPropria.getText()+"','"+TextoNomeDoPredio.getText()+"','"+TextoNomeDoCondominio.getText()+"')"); 
+		
+			
+			
+					} catch (Exception e1) {
+								System.out.println("Erro: " + e1.getMessage());
+
+					}
+					
+					JOptionPane.showMessageDialog(null, "Cadastro gravado!");
+			
+
+			}});
+				
+				
+				
+			
+
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoSalvar.setBounds(33, 337, 89, 23);
 		contentPane.add(BotaoSalvar);
 		
 		BotaoLimpar = new JButton("Limpar");
 		BotaoLimpar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+
+	public void actionPerformed(ActionEvent e) {
 				TextoCidade.setText("");
 				TextoEndereco.setText("");
 				TextoN.setText("");
@@ -179,7 +216,9 @@ public class TelaInicialCadastroResidencia extends JFrame {
 				TextoComplemento.setText("");
 				TextoResidenciaPropria.setText("");
 			}
+		
 		});
+		
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoLimpar.setBounds(272, 338, 89, 23);
 		contentPane.add(BotaoLimpar);
