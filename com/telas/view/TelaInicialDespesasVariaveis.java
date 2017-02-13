@@ -10,8 +10,12 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
 public class TelaInicialDespesasVariaveis extends JFrame {
@@ -113,6 +117,38 @@ public class TelaInicialDespesasVariaveis extends JFrame {
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoSalvar.setBounds(37, 375, 89, 23);
 		contentPane.add(BotaoSalvar);
+		BotaoSalvar.addActionListener(new ActionListener() {
+		
+		public void actionPerformed(ActionEvent e) {		
+			
+			
+			try {				
+				
+				Class.forName("com.mysql.jdbc.Driver");				
+				
+				Connection conector = DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");				
+				
+				Statement stm;
+				
+				stm =  conector.createStatement();
+				
+				
+			stm.executeUpdate ("INSERT into despesas_variaveis (mes_refe,valor_manutencao,grande_man,grande_alim,valor_alimentacao) VALUES ('"+TextoMesRefe.getText()+"','"+TextoValorManutencao.getText()+"','"+TxtGrandeMan.getText()+"','"+TxtGrandeAlim.getText()+"','"+TextoValorAlimentacao.getText()+"')"); 
+	
+		
+		
+				} catch (Exception e1) {
+							System.out.println("Erro: " + e1.getMessage());
+
+				}
+				
+				JOptionPane.showMessageDialog(null, "Cadastro gravado!");
+		
+
+		}});
+	
+		
+		
 		
 		JButton BotaoLimpar = new JButton("Limpar");
 		BotaoLimpar.addActionListener(new ActionListener() {

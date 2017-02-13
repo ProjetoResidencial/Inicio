@@ -6,13 +6,19 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.sql.DriverManager;
 import java.awt.event.ActionEvent;
+import java.sql.Connection;
+import java.sql.Statement;
 
 public class TelaInicialDespesasFixas extends JFrame {
 
@@ -40,6 +46,9 @@ public class TelaInicialDespesasFixas extends JFrame {
 			}
 		});
 	}
+	
+	
+	
 
 	public void novo(){
 		
@@ -131,11 +140,43 @@ public class TelaInicialDespesasFixas extends JFrame {
 		TextoValorInternet.setBounds(158, 264, 154, 20);
 		MesReferencia.add(TextoValorInternet);
 		TextoValorInternet.setColumns(10);
-		
+
+				
 		JButton BotaoSalvar = new JButton("Salvar");
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoSalvar.setBounds(27, 324, 89, 23);
 		MesReferencia.add(BotaoSalvar);
+		BotaoSalvar.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {		
+				
+					
+				try {				
+					
+					Class.forName("com.mysql.jdbc.Driver");				
+					
+					Connection conector = DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");				
+					
+					Statement stm;
+					
+					stm =  conector.createStatement();
+					
+					
+				stm.executeUpdate ("INSERT into despesas_fixas (mes_de_referencia,valor_agua,valor_energia,valor_telefone,valor_aluguel,valor_condominio,valor_internet) VALUES ('"+TextoMesDeReferencia.getText()+"','"+TextoValorAgua.getText()+"','"+TextoValorEnergia.getText()+"','"+TextoValorTelefone.getText()+"','"+TextoValorAluguel.getText()+"','"+TextoValorCondominio.getText()+"','"+TextoValorInternet.getText()+"')"); 
+		
+			
+			
+					} catch (Exception e1) {
+								System.out.println("Erro: " + e1.getMessage());
+
+					}
+					
+					JOptionPane.showMessageDialog(null, "Cadastro gravado!");
+			
+
+			}});
+		
+		
 		
 		JButton BotaoLimpar = new JButton("Limpar");
 		BotaoLimpar.addActionListener(new ActionListener() {

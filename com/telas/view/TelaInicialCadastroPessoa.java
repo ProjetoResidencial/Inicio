@@ -182,7 +182,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		contentPane.add(TextoDataNasc);
 		TextoDataNasc.setColumns(10);
 
-		/*
+		
 		 
 		JButton BotaoSalvar = new JButton("Salvar");
 		BotaoSalvar.addActionListener(new ActionListener() {
@@ -228,7 +228,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		BotaoSalvar.setBounds(39, 363, 114, 23);
 		contentPane.add(BotaoSalvar);
 		
-		*/
+		
 
 		JButton BotaoLimpar = new JButton("Limpar");
 		BotaoLimpar.addActionListener(new ActionListener() {
