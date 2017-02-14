@@ -33,7 +33,7 @@ public class Acesso {
 			consulta = (Statement) conexao.createStatement();
 
 			tabela = consulta.executeQuery(
-					"select login, senha from tbl_usuario where login='" + login + "'and senha='" + senha + "'");
+					"select login, senha from tbl_usuario where login= '" + login + "' and senha = '" + senha + "'");
 
 			if (tabela.next()) {
 				JOptionPane.showMessageDialog(null, "Banco com Dados Conectado com Sucesso");
@@ -53,20 +53,4 @@ public class Acesso {
 
 	}
 
-	
-
-	public boolean estaConectado() {
-		if (this.conexao != null) {
-			JOptionPane.showMessageDialog(null, "Banco com Dados Conectado com Sucesso");
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
-	
-	
-	
-	
-	
 }

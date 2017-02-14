@@ -94,7 +94,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 
 		JLabel Nome = new JLabel("Nome:");
 		Nome.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Nome.setBounds(24, 54, 55, 14);
+		Nome.setBounds(24, 54, 39, 18);
 		contentPane.add(Nome);
 
 		TextoNome = new JTextField();
@@ -104,7 +104,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 
 		JLabel Estadocivil = new JLabel("Estado Civil:");
 		Estadocivil.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Estadocivil.setBounds(14, 182, 80, 14);
+		Estadocivil.setBounds(14, 182, 73, 18);
 		contentPane.add(Estadocivil);
 
 		TextoEstadoCivil = new JTextField();
@@ -114,7 +114,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 				
 						JLabel Cidade = new JLabel("Cidade:");
 						Cidade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-						Cidade.setBounds(24, 140, 46, 14);
+						Cidade.setBounds(24, 140, 44, 18);
 						contentPane.add(Cidade);
 		
 				TextoCidade = new JTextField();
@@ -124,7 +124,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		
 				JLabel Endereo = new JLabel("Endere\u00E7o:");
 				Endereo.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-				Endereo.setBounds(21, 93, 80, 14);
+				Endereo.setBounds(21, 93, 59, 18);
 				contentPane.add(Endereo);
 
 		TextoEndereco = new JTextField();
@@ -144,7 +144,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 
 		Rg = new JLabel("Rg:");
 		Rg.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Rg.setBounds(51, 210, 28, 20);
+		Rg.setBounds(51, 210, 20, 18);
 		contentPane.add(Rg);
 		
 				TextoRg = new JTextField();
@@ -164,7 +164,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 
 		Idade = new JLabel("Idade:");
 		Idade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Idade.setBounds(39, 254, 55, 14);
+		Idade.setBounds(39, 254, 36, 18);
 		contentPane.add(Idade);
 		
 				TextoIdade = new JTextField();
@@ -174,7 +174,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		
 				DataNascimento = new JLabel("Data Nasc.");
 				DataNascimento.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-				DataNascimento.setBounds(14, 302, 80, 14);
+				DataNascimento.setBounds(14, 302, 68, 18);
 				contentPane.add(DataNascimento);
 
 		TextoDataNasc = new JTextField();
@@ -198,8 +198,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 					
 					Statement stm;
 					
-					stm = conector.createStatement();
-					
+					stm = conector.createStatement();					
 					
 				stm.executeUpdate ("INSERT into cadastro_pessoa (nome, endereco, numero, cidade, estado_civil, rg, cpf, idade, data_nascimento, uf) VALUES ('"+TextoNome.getText()+"','"+TextoEndereco.getText()+"','"+TextoNumero.getText()+"','"+TextoCidade.getText()+"','"+TextoEstadoCivil.getText()+"','"+TextoRg.getText()+"','"+TextoCpf.getText()+"','"+TextoIdade.getText()+"','"+TextoDataNasc.getText()+"','"+TextoUf.getText()+"')"); 
 		

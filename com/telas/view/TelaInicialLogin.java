@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+//importação da classe de acesso
 import com.banco.dao.Acesso;
 
 import javax.swing.JLabel;
@@ -36,9 +37,7 @@ public class TelaInicialLogin extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+
 	public TelaInicialLogin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -71,7 +70,7 @@ public class TelaInicialLogin extends JFrame {
 				
 				cl.Acesso(TextoLogin.getText(), TextoSenha.getText());
 				
-				// se o acesso for verdadeiro, abre a tela de cadastro de pessoa
+				// se o acesso for verdadeiro, abre a tela de menu geral
 				if (cl.acesso == true) {
 					TelaInicialMenuGeral tl = new TelaInicialMenuGeral();
 					tl.show();

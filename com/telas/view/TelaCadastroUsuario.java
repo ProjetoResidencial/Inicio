@@ -56,21 +56,21 @@ public class TelaCadastroUsuario extends JFrame {
 
 		JLabel lblUsuario = new JLabel("USU\u00C1RIO:");
 		lblUsuario.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		lblUsuario.setBounds(71, 68, 75, 17);
+		lblUsuario.setBounds(71, 68, 58, 14);
 		contentPane.add(lblUsuario);
 
 		TextoLogin = new JTextField();
-		TextoLogin.setBounds(156, 66, 151, 20);
+		TextoLogin.setBounds(156, 66, 86, 20);
 		contentPane.add(TextoLogin);
 		TextoLogin.setColumns(10);
 
 		JLabel lblSenha = new JLabel("SENHA:");
 		lblSenha.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		lblSenha.setBounds(71, 118, 56, 14);
+		lblSenha.setBounds(71, 118, 45, 14);
 		contentPane.add(lblSenha);
 
 		TextoSenha = new JTextField();
-		TextoSenha.setBounds(156, 115, 151, 20);
+		TextoSenha.setBounds(156, 115, 86, 20);
 		contentPane.add(TextoSenha);
 		TextoSenha.setColumns(10);
 
