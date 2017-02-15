@@ -16,12 +16,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
 
 public class TelaCadastroUsuario extends JFrame {
 
 	private JPanel contentPane;
+	private JPasswordField TextoSenha;
 	private JTextField TextoLogin;
-	private JTextField TextoSenha;
 
 
 	public static void main(String[] args) {
@@ -63,16 +64,17 @@ public class TelaCadastroUsuario extends JFrame {
 		TextoLogin.setBounds(156, 66, 86, 20);
 		contentPane.add(TextoLogin);
 		TextoLogin.setColumns(10);
+		
+		JLabel Senha = new JLabel("Senha:");
+		Senha.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		Senha.setBounds(104, 113, 46, 14);
+		contentPane.add(Senha);
 
-		JLabel lblSenha = new JLabel("SENHA:");
-		lblSenha.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		lblSenha.setBounds(71, 118, 45, 14);
-		contentPane.add(lblSenha);
-
-		TextoSenha = new JTextField();
-		TextoSenha.setBounds(156, 115, 86, 20);
+		TextoSenha = new JPasswordField();
+		TextoSenha.setBounds(160, 110, 124, 20);
 		contentPane.add(TextoSenha);
-		TextoSenha.setColumns(10);
+
+		
 
 		JButton BotaoSalvar = new JButton("Salvar");
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
@@ -108,6 +110,7 @@ public class TelaCadastroUsuario extends JFrame {
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				TextoLogin.setText("");
 				TextoSenha.setText("");
 
@@ -142,5 +145,11 @@ public class TelaCadastroUsuario extends JFrame {
 		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoNovo.setBounds(109, 227, 102, 23);
 		contentPane.add(BotaoNovo);
+		
+		
+		
+		
+		
+		
 	}
 }

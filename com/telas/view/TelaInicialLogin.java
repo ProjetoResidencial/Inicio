@@ -77,6 +77,7 @@ public class TelaInicialLogin extends JFrame {
 					tl.setExtendedState(new TelaInicialMenuGeral().MOVE_CURSOR);
 					dispose();
 				}
+				
 				// se acesso for false, simpa os campos e retorna no
 				// inicio.(requestfocus)
 				if (cl.acesso == false) {
