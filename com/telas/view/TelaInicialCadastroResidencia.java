@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.awt.event.ActionEvent;
+import javax.swing.JRadioButton;
 
 public class TelaInicialCadastroResidencia extends JFrame {
 
@@ -25,7 +26,6 @@ public class TelaInicialCadastroResidencia extends JFrame {
 	private JTextField TextoN;
 	private JTextField TextoCep;
 	private JTextField TextoTipoDeResidencia;
-	private JTextField TextoResidenciaPropria;
 	private JTextField TextoNomeDoPredio;
 	private JTextField TextoNomeDoCondominio;
 	private JLabel Complemento;
@@ -129,18 +129,13 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		ResidenciaPropria.setBounds(10, 216, 144, 14);
 		contentPane.add(ResidenciaPropria);
 		
-		TextoResidenciaPropria = new JTextField();
-		TextoResidenciaPropria.setBounds(161, 214, 333, 20);
-		contentPane.add(TextoResidenciaPropria);
-		TextoResidenciaPropria.setColumns(10);
-		
 		JLabel NomeDoPredio = new JLabel("Nome Do Pr\u00EAdio:");
 		NomeDoPredio.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		NomeDoPredio.setBounds(17, 252, 112, 14);
 		contentPane.add(NomeDoPredio);
 		
 		TextoNomeDoPredio = new JTextField();
-		TextoNomeDoPredio.setBounds(161, 250, 333, 20);
+		TextoNomeDoPredio.setBounds(161, 250, 211, 20);
 		contentPane.add(TextoNomeDoPredio);
 		TextoNomeDoPredio.setColumns(10);
 		
@@ -150,7 +145,7 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		contentPane.add(NomeDoCondominio);
 		
 		TextoNomeDoCondominio = new JTextField();
-		TextoNomeDoCondominio.setBounds(163, 291, 331, 20);
+		TextoNomeDoCondominio.setBounds(163, 291, 209, 20);
 		contentPane.add(TextoNomeDoCondominio);
 		TextoNomeDoCondominio.setColumns(10);
 		
@@ -253,6 +248,26 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoNovo.setBounds(154, 337, 89, 23);
 		contentPane.add(BotaoNovo);
+		
+		JRadioButton RadioButonSim = new JRadioButton("Sim");
+		RadioButonSim.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//sim é propria
+			}
+		});
+		RadioButonSim.setBounds(162, 213, 41, 23);
+		contentPane.add(RadioButonSim);
+		
+		JRadioButton rdbtnNo = new JRadioButton("Não");
+		rdbtnNo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//não é propria
+			}
+		});
+		rdbtnNo.setSelected(true);
+		rdbtnNo.setBounds(222, 213, 45, 23);
+		contentPane.add(rdbtnNo);
 	}
-
 }

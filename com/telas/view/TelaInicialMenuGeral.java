@@ -13,6 +13,10 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.SystemColor;
+import java.awt.Toolkit;
+import java.awt.Dialog.ModalExclusionType;
 
 public class TelaInicialMenuGeral extends JFrame {
 
@@ -38,6 +42,8 @@ public class TelaInicialMenuGeral extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaInicialMenuGeral() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Henrique\\Desktop\\fundo-azul-1.jpg"));
+		setBackground(SystemColor.windowBorder);
 		setTitle("Gerenciador de Contas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

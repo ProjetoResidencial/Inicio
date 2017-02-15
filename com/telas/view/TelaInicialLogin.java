@@ -40,7 +40,7 @@ public class TelaInicialLogin extends JFrame {
 
 	public TelaInicialLogin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 678, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -57,7 +57,7 @@ public class TelaInicialLogin extends JFrame {
 		contentPane.add(Senha);
 
 		TextoSenha = new JPasswordField();
-		TextoSenha.setBounds(160, 110, 124, 20);
+		TextoSenha.setBounds(160, 110, 307, 20);
 		contentPane.add(TextoSenha);
 
 		JButton BotaoAcessar = new JButton("Acessar");
@@ -106,7 +106,7 @@ public class TelaInicialLogin extends JFrame {
 		contentPane.add(BotaoCancelar);
 		
 		TextoLogin = new JTextField();
-		TextoLogin.setBounds(160, 79, 124, 20);
+		TextoLogin.setBounds(160, 79, 307, 20);
 		contentPane.add(TextoLogin);
 		TextoLogin.setColumns(10);
 		
