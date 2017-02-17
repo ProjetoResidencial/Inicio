@@ -55,19 +55,7 @@ public class TelaInicialMenuGeral extends JFrame {
 		MenuCadastros.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		menuBar.add(MenuCadastros);
 		
-		JMenuItem mntmCadastroDeResidncia = new JMenuItem("- Resid\u00EAncia");
-		mntmCadastroDeResidncia.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				TelaInicialCadastroResidencia tl = new TelaInicialCadastroResidencia();
-				tl.show();
-				tl.setExtendedState(new TelaInicialCadastroResidencia().MOVE_CURSOR);
-				//dispose();
-			}
-		});
-		mntmCadastroDeResidncia.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		MenuCadastros.add(mntmCadastroDeResidncia);
-		
-		JMenuItem mntmCadastroDePessoas = new JMenuItem("- Pessoas");
+		JMenuItem mntmCadastroDePessoas = new JMenuItem("--> Pessoas");
 		mntmCadastroDePessoas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaInicialCadastroPessoa tl = new TelaInicialCadastroPessoa();
@@ -76,35 +64,20 @@ public class TelaInicialMenuGeral extends JFrame {
 				//dispose();
 			}
 		});
-		mntmCadastroDePessoas.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		mntmCadastroDePessoas.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		MenuCadastros.add(mntmCadastroDePessoas);
 		
-		JMenuItem mntmDespesasFixas = new JMenuItem("- Desp. Fixas");
-		mntmDespesasFixas.addActionListener(new ActionListener() {
+		JMenuItem mntmDespesas = new JMenuItem("--> Despesas");
+		mntmDespesas.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		mntmDespesas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaInicialDespesasFixas tl = new TelaInicialDespesasFixas ();
+				CadastroDeDespesas tl = new CadastroDeDespesas();
 				tl.show();
-				tl.setExtendedState(new TelaInicialDespesasFixas().MOVE_CURSOR);
-				//dispose();
+				tl.setExtendedState(new CadastroDeDespesas().MOVE_CURSOR);
 				
 			}
 		});
-		MenuCadastros.add(mntmDespesasFixas);
-		mntmDespesasFixas.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		
-		JMenuItem mntmDespesasVariaveis = new JMenuItem("- Desp. Variaveis");
-		mntmDespesasVariaveis.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				TelaInicialDespesasVariaveis tl = new TelaInicialDespesasVariaveis ();
-				tl.show();
-				tl.setExtendedState(new TelaInicialDespesasVariaveis().MOVE_CURSOR);
-				//dispose fecha tela anterior
-				//dispose();
-				
-			}
-		});
-		MenuCadastros.add(mntmDespesasVariaveis);
-		mntmDespesasVariaveis.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		MenuCadastros.add(mntmDespesas);
 		
 		JMenu MenuRelatorios = new JMenu("RELAT\u00D3RIOS");
 		MenuRelatorios.setFont(new Font("Times New Roman", Font.BOLD, 13));

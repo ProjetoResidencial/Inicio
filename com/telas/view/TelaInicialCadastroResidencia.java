@@ -17,6 +17,10 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import java.awt.event.ActionEvent;
 import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JCheckBox;
+import java.awt.Color;
+import javax.swing.UIManager;
 
 public class TelaInicialCadastroResidencia extends JFrame {
 
@@ -35,6 +39,8 @@ public class TelaInicialCadastroResidencia extends JFrame {
 	private JButton BotaoCancelar;
 	private JLabel lblCadastroDeResidncia;
 	private JButton BotaoNovo;
+	private JTextField textField;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
 	 * Launch the application.
@@ -62,104 +68,111 @@ public class TelaInicialCadastroResidencia extends JFrame {
 		TextoNomeDoPredio.setText("");
 		TextoNomeDoCondominio.setText("");
 		TextoComplemento.setText("");
-		TextoResidenciaPropria.setText("");
+	
 
 	}
+	
+	
+	
+	
 
 	public TelaInicialCadastroResidencia() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 552, 410);
+		setBounds(100, 100, 908, 617);
 		contentPane = new JPanel();
+		contentPane.setBackground(UIManager.getColor("Button.background"));
+		contentPane.setForeground(Color.LIGHT_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel Cidade = new JLabel("Cidade: ");
+		Cidade.setBounds(10, 78, 48, 18);
 		Cidade.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Cidade.setBounds(10, 64, 77, 14);
 		contentPane.add(Cidade);
 		
 		TextoCidade = new JTextField();
-		TextoCidade.setBounds(97, 62, 298, 20);
+		TextoCidade.setBounds(73, 78, 298, 20);
 		contentPane.add(TextoCidade);
 		TextoCidade.setColumns(10);
 		
 		JLabel Endereo = new JLabel("Endere\u00E7o:");
+		Endereo.setBounds(10, 125, 59, 18);
 		Endereo.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Endereo.setBounds(10, 100, 60, 14);
 		contentPane.add(Endereo);
 		
 		TextoEndereco = new JTextField();
-		TextoEndereco.setBounds(83, 98, 312, 20);
+		TextoEndereco.setBounds(73, 125, 414, 20);
 		contentPane.add(TextoEndereco);
 		TextoEndereco.setColumns(10);
 		
 		TextoN = new JTextField();
-		TextoN.setBounds(432, 98, 52, 20);
+		TextoN.setBounds(557, 125, 52, 20);
 		contentPane.add(TextoN);
 		TextoN.setColumns(10);
 		
 		JLabel N = new JLabel("N\u00BA");
+		N.setBounds(517, 127, 19, 14);
 		N.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		N.setBounds(403, 100, 19, 14);
 		contentPane.add(N);
 		
 		JLabel Cep = new JLabel("Cep:");
+		Cep.setBounds(10, 176, 27, 18);
 		Cep.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Cep.setBounds(20, 134, 46, 14);
 		contentPane.add(Cep);
 		
 		TextoCep = new JTextField();
-		TextoCep.setBounds(69, 129, 157, 20);
+		TextoCep.setBounds(73, 176, 134, 20);
 		contentPane.add(TextoCep);
 		TextoCep.setColumns(10);
 		
 		JLabel TipoDeResidencia = new JLabel("Tipo De Residencia:");
+		TipoDeResidencia.setBounds(10, 245, 119, 18);
 		TipoDeResidencia.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		TipoDeResidencia.setBounds(10, 177, 141, 14);
 		contentPane.add(TipoDeResidencia);
 		
 		TextoTipoDeResidencia = new JTextField();
-		TextoTipoDeResidencia.setBounds(161, 175, 333, 20);
+		TextoTipoDeResidencia.setBounds(149, 245, 346, 20);
 		contentPane.add(TextoTipoDeResidencia);
 		TextoTipoDeResidencia.setColumns(10);
 		
-		JLabel ResidenciaPropria = new JLabel("Resid\u00EAncia Propria ? :");
+		JLabel ResidenciaPropria = new JLabel("Quem Reside:");
+		ResidenciaPropria.setBounds(10, 299, 103, 18);
 		ResidenciaPropria.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		ResidenciaPropria.setBounds(10, 216, 144, 14);
 		contentPane.add(ResidenciaPropria);
 		
 		JLabel NomeDoPredio = new JLabel("Nome Do Pr\u00EAdio:");
+		NomeDoPredio.setBounds(10, 365, 103, 18);
 		NomeDoPredio.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		NomeDoPredio.setBounds(17, 252, 112, 14);
 		contentPane.add(NomeDoPredio);
 		
 		TextoNomeDoPredio = new JTextField();
-		TextoNomeDoPredio.setBounds(161, 250, 211, 20);
+		TextoNomeDoPredio.setBounds(137, 365, 346, 20);
 		contentPane.add(TextoNomeDoPredio);
 		TextoNomeDoPredio.setColumns(10);
 		
 		JLabel NomeDoCondominio = new JLabel("Nome Do Condominio:");
+		NomeDoCondominio.setBounds(10, 415, 134, 18);
 		NomeDoCondominio.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		NomeDoCondominio.setBounds(10, 293, 170, 14);
 		contentPane.add(NomeDoCondominio);
 		
 		TextoNomeDoCondominio = new JTextField();
-		TextoNomeDoCondominio.setBounds(163, 291, 209, 20);
+		TextoNomeDoCondominio.setBounds(163, 415, 344, 20);
 		contentPane.add(TextoNomeDoCondominio);
 		TextoNomeDoCondominio.setColumns(10);
 		
 		Complemento = new JLabel("Complemento:");
+		Complemento.setBounds(233, 176, 84, 18);
 		Complemento.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		Complemento.setBounds(237, 129, 94, 14);
 		contentPane.add(Complemento);
 		
 		TextoComplemento = new JTextField();
-		TextoComplemento.setBounds(341, 129, 192, 20);
+		TextoComplemento.setBounds(349, 176, 312, 20);
 		contentPane.add(TextoComplemento);
 		TextoComplemento.setColumns(10);
 		
 		BotaoSalvar = new JButton("Salvar");
+		BotaoSalvar.setBounds(20, 544, 187, 23);
 		BotaoSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -175,7 +188,7 @@ public class TelaInicialCadastroResidencia extends JFrame {
 					stm = conector.createStatement();
 					
 					
-				stm.executeUpdate ("INSERT into cadastro_residencia (cidade, endereco, numero, cep, complemento, tipo_de_residencia, residencia_propria, nome_do_predio, nome_do_condominio) VALUES ('"+TextoCidade.getText()+"','"+TextoEndereco.getText()+"','"+TextoN.getText()+"','"+TextoCep.getText()+"','"+TextoComplemento.getText()+"','"+TextoTipoDeResidencia.getText()+"','"+TextoResidenciaPropria.getText()+"','"+TextoNomeDoPredio.getText()+"','"+TextoNomeDoCondominio.getText()+"')"); 
+				stm.executeUpdate ("INSERT into cadastro_residencia (cidade, endereco, numero, cep, complemento, tipo_de_residencia, residencia_propria, nome_do_predio, nome_do_condominio) VALUES ('"+TextoCidade.getText()+"','"+TextoEndereco.getText()+"','"+TextoN.getText()+"','"+TextoCep.getText()+"','"+TextoComplemento.getText()+"','"+TextoTipoDeResidencia.getText()+"','"+JRadioButton.getText()+"','"+TextoNomeDoPredio.getText()+"','"+TextoNomeDoCondominio.getText()+"')"); 
 		
 			
 			
@@ -189,15 +202,15 @@ public class TelaInicialCadastroResidencia extends JFrame {
 
 			}});
 				
-				
+		
 				
 			
 
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoSalvar.setBounds(33, 337, 89, 23);
 		contentPane.add(BotaoSalvar);
 		
 		BotaoLimpar = new JButton("Limpar");
+		BotaoLimpar.setBounds(475, 544, 187, 23);
 		BotaoLimpar.addActionListener(new ActionListener() {
 
 	public void actionPerformed(ActionEvent e) {
@@ -209,16 +222,16 @@ public class TelaInicialCadastroResidencia extends JFrame {
 				TextoNomeDoPredio.setText("");
 				TextoNomeDoCondominio.setText("");
 				TextoComplemento.setText("");
-				TextoResidenciaPropria.setText("");
+				
 			}
 		
 		});
 		
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoLimpar.setBounds(272, 338, 89, 23);
 		contentPane.add(BotaoLimpar);
 		
 		BotaoCancelar = new JButton("Cancelar");
+		BotaoCancelar.setBounds(695, 544, 187, 23);
 		BotaoCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -231,43 +244,44 @@ public class TelaInicialCadastroResidencia extends JFrame {
 			}
 		});
 		BotaoCancelar.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoCancelar.setBounds(396, 338, 111, 23);
 		contentPane.add(BotaoCancelar);
 		
 		lblCadastroDeResidncia = new JLabel("Cadastro De Resid\u00EAncia");
-		lblCadastroDeResidncia.setFont(new Font("Times New Roman", Font.BOLD, 18));
-		lblCadastroDeResidncia.setBounds(154, 21, 268, 14);
+		lblCadastroDeResidncia.setBounds(282, 11, 330, 30);
+		lblCadastroDeResidncia.setFont(new Font("Times New Roman", Font.BOLD, 31));
 		contentPane.add(lblCadastroDeResidncia);
 		
 		BotaoNovo = new JButton("Novo");
+		BotaoNovo.setBounds(247, 544, 187, 23);
 		BotaoNovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				novo();
 			}
 		});
 		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		BotaoNovo.setBounds(154, 337, 89, 23);
 		contentPane.add(BotaoNovo);
 		
-		JRadioButton RadioButonSim = new JRadioButton("Sim");
-		RadioButonSim.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				//sim é propria
-			}
-		});
-		RadioButonSim.setBounds(162, 213, 41, 23);
-		contentPane.add(RadioButonSim);
+		textField = new JTextField();
+		textField.setBounds(111, 299, 342, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
 		
-		JRadioButton rdbtnNo = new JRadioButton("Não");
-		rdbtnNo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				//não é propria
-			}
-		});
-		rdbtnNo.setSelected(true);
-		rdbtnNo.setBounds(222, 213, 45, 23);
-		contentPane.add(rdbtnNo);
+		JLabel lblResidenciaPropria = new JLabel("Residencia Propria ?");
+		lblResidenciaPropria.setBounds(10, 471, 145, 14);
+		lblResidenciaPropria.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		contentPane.add(lblResidenciaPropria);
+		
+		JRadioButton RadioButomSim = new JRadioButton("Sim");
+		buttonGroup.add(RadioButomSim);
+		RadioButomSim.setBounds(161, 468, 59, 23);
+		contentPane.add(RadioButomSim);
+		
+		JRadioButton RadioButomNao = new JRadioButton("Nao");
+		buttonGroup.add(RadioButomNao);
+		RadioButomNao.setBounds(247, 468, 70, 23);
+		contentPane.add(RadioButomNao);
+		
+		
+		
 	}
 }
