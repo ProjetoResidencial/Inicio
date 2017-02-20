@@ -46,9 +46,8 @@ public class CadastroDeDespesas extends JFrame {
 	private JTextField ObservacaoDeManutencao;
 	private JTextField ObservacoesDespesasFixas;
 
-	/**
-	 * Launch the application.
-	 */
+	
+		
 	public static void main(String[] args) {
 
 		EventQueue.invokeLater(new Runnable() {

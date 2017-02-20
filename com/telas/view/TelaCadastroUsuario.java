@@ -20,10 +20,9 @@ import javax.swing.JPasswordField;
 
 public class TelaCadastroUsuario extends JFrame {
 
-	private JPanel contentPane;
-	private JPasswordField TextoSenha;
-	private JTextField TextoLogin;
-
+	public JPanel contentPane;
+	public JPasswordField TextoSenha;
+	public JTextField TextoLogin;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -57,24 +56,22 @@ public class TelaCadastroUsuario extends JFrame {
 
 		JLabel lblUsuario = new JLabel("USU\u00C1RIO:");
 		lblUsuario.setFont(new Font("Times New Roman", Font.BOLD, 12));
-		lblUsuario.setBounds(71, 68, 58, 14);
+		lblUsuario.setBounds(88, 69, 58, 14);
 		contentPane.add(lblUsuario);
 
 		TextoLogin = new JTextField();
-		TextoLogin.setBounds(156, 66, 86, 20);
+		TextoLogin.setBounds(160, 66, 124, 20);
 		contentPane.add(TextoLogin);
 		TextoLogin.setColumns(10);
-		
-		JLabel Senha = new JLabel("Senha:");
+
+		JLabel Senha = new JLabel("SENHA:");
 		Senha.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		Senha.setBounds(104, 113, 46, 14);
+		Senha.setBounds(88, 113, 62, 14);
 		contentPane.add(Senha);
 
 		TextoSenha = new JPasswordField();
 		TextoSenha.setBounds(160, 110, 124, 20);
 		contentPane.add(TextoSenha);
-
-		
 
 		JButton BotaoSalvar = new JButton("Salvar");
 		BotaoSalvar.setFont(new Font("Times New Roman", Font.BOLD, 15));
@@ -91,7 +88,8 @@ public class TelaCadastroUsuario extends JFrame {
 
 					stm = conector.createStatement();
 
-					stm.executeUpdate ("INSERT into tbl_usuario (login, senha) VALUES ('"+TextoLogin.getText()+"' , '"+TextoSenha.getText()+"')");
+					stm.executeUpdate("INSERT into tbl_usuario (login, senha) VALUES ('" + TextoLogin.getText() + "','"
+							+ TextoSenha.getText() + "')");
 
 				} catch (Exception e1) {
 					System.out.println("Erro: " + e1.getMessage());
@@ -109,12 +107,11 @@ public class TelaCadastroUsuario extends JFrame {
 		JButton BotaoLimpar = new JButton("Limpar");
 		BotaoLimpar.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoLimpar.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
-				
+
 				TextoLogin.setText("");
 				TextoSenha.setText("");
-
-				
 
 			}
 		});
@@ -145,11 +142,6 @@ public class TelaCadastroUsuario extends JFrame {
 		BotaoNovo.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		BotaoNovo.setBounds(109, 227, 102, 23);
 		contentPane.add(BotaoNovo);
-		
-		
-		
-		
-		
-		
+
 	}
 }
