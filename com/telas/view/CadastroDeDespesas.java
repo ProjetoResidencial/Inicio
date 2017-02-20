@@ -160,11 +160,11 @@ public class CadastroDeDespesas extends JFrame {
 
 		JLabel lblAlimentao = new JLabel("Alimenta\u00E7\u00E3o : ");
 		lblAlimentao.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblAlimentao.setBounds(448, 93, 102, 14);
+		lblAlimentao.setBounds(432, 93, 105, 14);
 		contentPane.add(lblAlimentao);
 
 		TextoAlimentacao = new JTextField();
-		TextoAlimentacao.setBounds(570, 91, 86, 20);
+		TextoAlimentacao.setBounds(529, 91, 86, 20);
 		contentPane.add(TextoAlimentacao);
 		TextoAlimentacao.setColumns(10);
 
@@ -174,7 +174,7 @@ public class CadastroDeDespesas extends JFrame {
 		contentPane.add(lblManuteno);
 
 		TextoManutencao = new JTextField();
-		TextoManutencao.setBounds(544, 262, 86, 20);
+		TextoManutencao.setBounds(529, 262, 86, 20);
 		contentPane.add(TextoManutencao);
 		TextoManutencao.setColumns(10);
 
@@ -229,6 +229,7 @@ public class CadastroDeDespesas extends JFrame {
 
 			}
 		});
+		
 		BotaoLimpar.setBounds(281, 428, 173, 23);
 		contentPane.add(BotaoLimpar);
 
