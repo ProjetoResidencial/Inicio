@@ -53,7 +53,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 	private JRadioButton rdbtnNewRadioButton_1;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JLabel lblDataDoCadastro;
-	private JTextField textField;
+	private JTextField TextoDataDoCadastro;
 	
 
 
@@ -247,6 +247,7 @@ public class TelaInicialCadastroPessoa extends JFrame {
 				TextoEstadoCivil.setText("");
 				TextoNome.setText("");
 				TextoUf.setText("");
+				TextoDataDoCadastro.setText("");
 			}
 		});
 
@@ -318,10 +319,10 @@ public class TelaInicialCadastroPessoa extends JFrame {
 		lblDataDoCadastro.setBounds(719, 437, 109, 14);
 		contentPane.add(lblDataDoCadastro);
 		
-		textField = new JTextField();
-		textField.setBounds(719, 462, 109, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		TextoDataDoCadastro = new JTextField();
+		TextoDataDoCadastro.setBounds(719, 462, 109, 20);
+		contentPane.add(TextoDataDoCadastro);
+		TextoDataDoCadastro.setColumns(10);
 		
 			
 	
