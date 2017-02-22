@@ -33,7 +33,7 @@ public class Acesso {
 			consulta = (Statement) conexao.createStatement();
 
 			tabela = consulta.executeQuery(
-					"select login, senha from tbl_usuario where login= '" + login + "' and senha = '" + senha + "'");
+					"select login, senha from login where login= '" + login + "' and senha = '" + senha + "'");
 
 			if (tabela.next()) {
 				JOptionPane.showMessageDialog(null, "Banco com Dados Conectado com Sucesso");

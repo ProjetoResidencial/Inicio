@@ -17,6 +17,8 @@ import javax.swing.JList;
 import java.awt.Panel;
 import java.awt.Choice;
 import javax.swing.JMenu;
+import javax.swing.JOptionPane;
+
 import java.awt.Label;
 import javax.swing.JToolBar;
 import javax.swing.JInternalFrame;
@@ -30,6 +32,9 @@ import javax.swing.JTextPane;
 import javax.swing.Box;
 import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
 public class CadastroDeDespesas extends JFrame {
@@ -211,7 +216,44 @@ public class CadastroDeDespesas extends JFrame {
 		JButton BotaoSalvar = new JButton("SALVAR");
 		BotaoSalvar.setBounds(53, 428, 155, 23);
 		contentPane.add(BotaoSalvar);
+		BotaoSalvar.addActionListener(new ActionListener() {
 
+			public void actionPerformed(ActionEvent e) {
+				
+
+				try {
+
+					Class.forName("com.mysql.jdbc.Driver");
+
+					Connection conector = DriverManager.getConnection("jdbc:mysql://localhost/login", "root", "");
+
+					Statement stm;
+
+					stm = conector.createStatement();
+
+					stm.executeUpdate(
+							"INSERT into cadastro_despesas ( agua, energia, aluguel, condominio, internet, alimentacao, manutencao, obs_despesas_fixas, obs_alimentacao, obs_manutencao) VALUES ('"
+									+ TextoAgua.getText() + "','" + TextoEnergia.getText() + "','"
+									+ TextoAluguel.getText() + "','" + TextoCondominio.getText() + "','"
+									+ TextoInternet.getText() + "','" + TextoAlimentacao.getText() + "','"
+									+ TextoManutencao.getText() + "','" + ObservacaoDeAlimentacao.getText() + "','"
+									+ ObservacaoDeManutencao.getText() + "','" + ObservacoesDespesasFixas.getText() + "')");
+
+				} catch (Exception e1) {
+					System.out.println("Erro: " + e1.getMessage());
+
+				}
+
+				JOptionPane.showMessageDialog(null, "Cadastro gravado!");
+
+			}
+		});
+
+		
+		
+		
+		
+		
 		JButton BotaoLimpar = new JButton("LIMPAR");
 		BotaoLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

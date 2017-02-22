@@ -88,7 +88,7 @@ public class TelaCadastroUsuario extends JFrame {
 
 					stm = conector.createStatement();
 
-					stm.executeUpdate("INSERT into tbl_usuario (login, senha) VALUES ('" + TextoLogin.getText() + "','"
+					stm.executeUpdate("INSERT into login (login, senha) VALUES ('" + TextoLogin.getText() + "','"
 							+ TextoSenha.getText() + "')");
 
 				} catch (Exception e1) {
